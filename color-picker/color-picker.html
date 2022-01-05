@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Color Picker</title>
+
+     <link rel="stylesheet" href="color-picker.css">
+     <script src="color-picker.js" defer></script>
+
+     <!-- Font Awesome Kit Code -->
+     <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+     <div id="main">
+          <h1 id="heading">Color Picker:</h1>
+          <p id="color"></p>
+          <div id="color-codes">
+               <div id="hex-container">
+                    <label for="hex">HEX:</label>
+                    <pre>  </pre>
+                    <input type="text" id="hash" value="#" readonly>
+                    <input type="text" id="hex" placeholder="ffffff" value="ffffff"
+                         oninput="syncRGBHexValues('hex', this.value)">
+                    <pre>  </pre>
+                    <i class="fa fa-copy" onclick="copyToClipboard('HEX')"></i>
+               </div>
+
+               <div id="rgb-container">
+                    <label for="r">RGB: </label>
+                    <pre>  </pre>
+                    <p id="rgb">
+                         ( <input id="r-number" type="number" oninput="syncRGBHexValues('r', this.value)" value="255"
+                              min="0" max="255"> ,
+                         <input id="g-number" type="number" oninput="syncRGBHexValues('g', this.value)" value="255"
+                              min="0" max="255"> ,
+                         <input id="b-number" type="number" oninput="syncRGBHexValues('b', this.value)" value="255"
+                              min="0" max="255"> )
+                    </p>
+                    <pre>  </pre>
+                    <i class="fa fa-copy" onclick="copyToClipboard('RGB')"></i>
+               </div>
+
+               <div id="rgb-range-container">
+                    <div id="r-container">
+                         <label for="r-range">r:</label>
+                         <pre>  </pre>
+                         <input type="range" class="rgb-range" id="r-range" value="255" min="0" max="255"
+                              oninput="syncRGBHexValues('r', this.value)">
+                    </div>
+                    <div id="g-container">
+                         <label for="g-range">g:</label>
+                         <pre>  </pre>
+                         <input type="range" class="rgb-range" id="g-range" value="255" min="0" max="255"
+                              oninput="syncRGBHexValues('g', this.value)">
+                    </div>
+                    <div id="b-container">
+                         <label for="b-range">b:</label>
+                         <pre>  </pre>
+                         <input type="range" class="rgb-range" id="b-range" value="255" min="0" max="255"
+                              oninput="syncRGBHexValues('b', this.value)">
+                    </div>
+               </div>
+          </div>
+
+          <div id="written-by-container">
+               <h3>Written by <a href="https://github.com/rohithpala" target="_blank">Rohith Pala</a> with &hearts;.
+               </h3>
+               <h3>You can find the code of this project
+                    <a href="https://github.com/rohithpala/WebDev/tree/main/HTML-CSS-JS-Projects/colour-picker"
+                         target="_blank">here</a>
+               </h3>
+          </div>
+     </div>
+</body>
+
+</html>
