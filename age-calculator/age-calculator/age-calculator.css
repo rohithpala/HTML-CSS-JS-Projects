@@ -1,0 +1,91 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#main {
+  position: relative;
+  background-color: #3e3e3e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 54px - 92px);
+  border: 2px solid #fff;
+}
+
+#heading {
+  display: flex;
+  color: #fcd2e8;
+  min-width: 50px;
+  font-size: larger;
+}
+
+#heading a {
+  height: fit-content;
+}
+
+#info {
+  color: #fcd2e8;
+}
+
+#info:hover {
+  color: #fff;
+}
+
+#dmy-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#date-container,
+#month-container,
+#year-container {
+  color: #fff;
+  padding: 20px 50px;
+}
+
+#date-dd,
+#month-dd,
+#year-ip {
+  width: 120px;
+  text-align: center;
+  outline: none;
+}
+
+#month-dd {
+  margin-left: 33px;
+}
+
+#date-dd,
+#year-ip {
+  margin-left: 45px;
+}
+
+#age-button {
+  color: #fff;
+  background-color: transparent;
+  margin-top: 15px;
+  padding: 7px 30px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+}
+
+#age-button:hover {
+  background-color: #eee;
+  color: #1e1e1e;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+#age-container {
+  margin-top: 10px;
+}
+
+#age {
+  display: none;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}

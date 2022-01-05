@@ -1,0 +1,20 @@
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#how-it-works {
+  color: #ccc;
+  background-color: #3e3e3e;
+  min-height: calc(100vh - 54px - 92px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+}
+
+ol {
+  text-align: center;
+}

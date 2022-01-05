@@ -1,0 +1,101 @@
+footer {
+  position: absolute; /* relative to 'body' */
+  bottom: 0;
+  width: 100%;
+  background-color: #1e1e1e;
+  color: rgb(255, 196, 0);
+  font-weight: inherit;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid #fff;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.vertical-line {
+  background-color: #fff;
+  border: 1px solid #fff;
+  height: 90px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li {
+  display: inline;
+  padding: 0 5px;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(255, 196, 0);
+}
+
+#links a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  color: rgb(255, 196, 0);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+footer hr {
+  width: 100%;
+  background-color: #fff;
+}
+
+#links,
+#contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#instagram,
+#youtube,
+#github,
+#whatsapp,
+#phone,
+#email,
+#linkedin {
+  margin-top: 2px;
+  font-size: 1.5em;
+}
+
+#phone {
+  color: #4eeaff;
+}
+
+#instagram {
+  color: #ff002b;
+}
+
+#youtube {
+  color: #f00;
+}
+
+#whatsapp {
+  color: #25d366;
+}
+
+#github {
+  color: #fff;
+}
+
+#linkedin {
+  color: #0077b5;
+}
+
+#contact-us a {
+  margin: 0 5px;
+}
