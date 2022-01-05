@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: #3e3e3e;
+  min-height: 100vh;
+}
+
+#main {
+  color: #fff;
+  background-color: #1e1e1e;
+  padding: 5rem 10rem;
+}
+
+#item-input-container,
+#buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#buttons-container {
+  margin-top: 10px;
+}
+
+#item-input-container {
+  margin: 10px 0;
+}
+
+#item-input {
+  outline: none;
+  margin-right: 10px;
+  padding: 0 6px;
+}
+
+#error-message {
+  display: none;
+}
+
+#list {
+  text-align: center;
+  width: 300px;
+  word-break: break-all;
+  display: table;
+}
+
+.item-container {
+  display: table-row;
+  vertical-align: center;
+}
+
+.td {
+  display: table-cell;
+}
+
+.cb {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+#remove,
+#add-completed-item {
+  width: 20px;
+  height: 20px;
+}
+
+#add,
+#clear-list,
+#completed {
+  padding: 0 10px;
+}
+
+#completed {
+  margin-top: 10px;
+}
+
+.button {
+  user-select: none;
+  outline: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}

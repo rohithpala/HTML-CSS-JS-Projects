@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TODO List</title>
+
+	<link rel="stylesheet" href="to-do-list.css">
+
+	<script src="to-do-list.js" defer></script>
+
+	<script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+	<div id="main">
+		<h1 id="title">TODO List</h1>
+
+		<div id="item-input-container">
+			<input type="text" id="item-input">
+			<button class="button" id="add" onclick="addItem()">Add Item</button>
+		</div>
+		<span id="error-message">Cannot add an Empty Item</span>
+
+		<ol id="list"></ol>
+
+		<button class="button" id="completed" onclick="markAsCompleted()">Mark as Completed</button>
+		<div id="buttons-container">
+			<button class="button" id="add-completed-item" onclick="addCompletedItem()">+</button>
+			<button class="button" id="remove" onclick="removeItem()">-</button>
+			<button class="button" id="clear-list" onclick="clearList()">Clear List</button>
+		</div>
+
+	</div>
+</body>
+
+</html>
