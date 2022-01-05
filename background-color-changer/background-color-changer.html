@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Background Color Changer</title>
+     <link rel="stylesheet" href="background-color-changer.css">
+     <script src="background-color-changer.js"></script>
+     <!-- Font Awesome Kit Code -->
+     <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+     <button class="button" id="reset" onclick="changeColors(false, 'reset')">Reset to Defaults</button>
+
+     <div id="h1-copy-container">
+          <h1 id="background-color-h1">Background Color: <span id="color">#ffffff</span></h1>
+          <pre>  </pre>
+          <i class="fas fa-copy" id="copy" onclick="copyToClipboard()" title="Copy Color Code"></i>
+     </div>
+
+     <button class="button" id="change" onclick="setBackgroundColor()">Change Background Color</button>
+
+     <div id="rbl-container">
+          <div>
+               <input for="hexl" type="radio" id="hex" value="Show Hex Values" name="type"
+                    oninput="changeColorCodeValues()" checked>
+               <label for="hex" id="hexl">Show Hex Values</label>
+          </div>
+          <div>
+               <input type="radio" id="rgb" value="Show RGB Values" name="type" oninput="changeColorCodeValues()">
+               <label for="rgb" id="rgbl">Show RGB Values</label>
+          </div>
+     </div>
+
+     <div id="written-by-container">
+          <h3>Written by <a href="https://github.com/rohithpala" target="_blank">Rohith Pala</a> with &hearts;.</h3>
+          <h3>You can find the code of this project
+               <a href="https://github.com/rohithpala/WebDev/tree/main/HTML-CSS-JS-Projects/background-color-changer"
+                    target="_blank">here</a>
+          </h3>
+     </div>
+</body>
+
+</html>
