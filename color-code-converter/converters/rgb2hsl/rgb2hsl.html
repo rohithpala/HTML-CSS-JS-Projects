@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>RGB2HSL Converter</title>
+   <link rel="stylesheet" href="rgb2hsl.css">
+   <script src="rgb2hsl.js" defer></script>
+</head>
+
+<body>
+   <div id="main">
+      <h1>RGB to HSL Converter</h1>
+
+      <table id="rgb-container">
+         <tr>
+            <td>R:</td>
+            <td id="r"><input id="r-input" type="number" placeholder="255" value="255" min="0" max="255"
+                  oninput="syncInputs(this.id, this.value)"></td>
+         </tr>
+         <tr>
+            <td>G:</td>
+            <td id="g"><input id="g-input" type="number" placeholder="255" value="255" min="0" max="255"
+                  oninput="syncInputs(this.id, this.value)"></td>
+         </tr>
+         <tr>
+            <td>B:</td>
+            <td id="b"><input id="b-input" type="number" placeholder="255" value="255" min="0" max="255"
+                  oninput="syncInputs(this.id, this.value)"></td>
+         </tr>
+         <tr>
+            <td>RGB:</td>
+            <td id="rgb">
+               rgb(
+               <input id="r-rgb" type="number" placeholder="255" value="255" min="0" max="255"
+                  oninput="syncInputs(this.id, this.value)"> ,
+               <input id="g-rgb" type="number" placeholder="255" value="255" min="0" max="255"
+                  oninput="syncInputs(this.id, this.value)"> ,
+               <input id="b-rgb" type="number" placeholder="255" value="255" min="0" max="255"
+                  oninput="syncInputs(this.id, this.value)">
+               )
+            </td>
+         </tr>
+      </table>
+
+      <div id="btn-container">
+         <button id="convert-button">Convert to HSL</button>
+      </div>
+
+      <table id="hsl-container">
+         <tr>
+            <td>Hue (H):</td>
+            <td id="h">0 <sup>°</sup></td>
+         </tr>
+         <tr>
+            <td>Saturation (S):</td>
+            <td id="s">0 %</td>
+         </tr>
+         <tr>
+            <td>Lightness (L):</td>
+            <td id="l">100 %</td>
+         </tr>
+         <tr>
+            <td>HSL:</td>
+            <td id="hsl">hsl(0 <sup>°</sup> , 0.00 % , 100.00 %)</td>
+         </tr>
+      </table>
+
+      <div id="color-panel"></div>
+   </div>
+
+   <span id="back">Go back to <a href="../../color-code-converter.html"> Homepage </a></span>
+</body>
+
+</html>

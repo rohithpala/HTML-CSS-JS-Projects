@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <title>Color Code Converter</title>
+
+   <link rel="stylesheet" href="color-code-converter.css">
+   <script src="color-code-converter.js" defer></script>
+
+   <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <div id="main-container">
+      <div id="h-exp-col-container">
+         <h1>Color Code Converters:</h1>
+         <button id="exp-col-button">Expand All</button>
+      </div>
+      <div id="converter-container">
+         <!-- RGB 2 HEX -->
+         <div class="accordion" id="rgb2hex-container" onclick="showDesc(this.id)">
+            <span> RGB2HEX Converter </span>
+            <i class="fa fa-plus" id="rgb2hex-plus"></i>
+         </div>
+         <div class="desc" id="rgb2hex-desc">
+            This converts the given RGB value to its corresponding HEX value <br>
+            <a href="./converters/rgb2hex/rgb2hex.html" target="_blank">Go to RGB2HEX</a>
+         </div>
+         <!-- HEX 2 RGB -->
+         <div class="accordion" id="hex2rgb-container" onclick="showDesc(this.id)">
+            <span> HEX2RGB Converter </span>
+            <i class="fa fa-plus" id="hex2rgb-plus"></i>
+         </div>
+         <div class="desc" id="hex2rgb-desc">
+            This converts the given HEX value to its corresponding RGB value <br>
+            <a href="./converters/hex2rgb/hex2rgb.html" target="_blank">Go to HEX2RGB</a>
+         </div>
+         <!-- RGB 2 HSL -->
+         <div class="accordion" id="rgb2hsl-container" onclick="showDesc(this.id)">
+            <span> RGB2HSL Converter </span>
+            <i class="fa fa-plus" id="rgb2hsl-plus"></i>
+         </div>
+         <div class="desc" id="rgb2hsl-desc">
+            This converts the given RGB value to its corresponding HSL value <br>
+            <a href="./converters/rgb2hsl/rgb2hsl.html" target="_blank">Go to RGB2HSL</a>
+         </div>
+         <!-- HSL 2 RGB -->
+         <div class="accordion" id="hsl2rgb-container" onclick="showDesc(this.id)">
+            <span> HSL2RGB Converter </span>
+            <i class="fa fa-plus" id="hsl2rgb-plus"></i>
+         </div>
+         <div class="desc" id="hsl2rgb-desc">
+            This converts the given HSL value to its corresponding RGB value <br>
+            <a href="./converters/hsl2rgb/hsl2rgb.html" target="_blank">Go to HSL2RGB</a>
+         </div>
+         <!-- HEX 2 HSL -->
+         <div class="accordion" id="hex2hsl-container" onclick="showDesc(this.id)">
+            <span> HEX2HSL Converter </span>
+            <i class="fa fa-plus" id="hex2hsl-plus"></i>
+         </div>
+         <div class="desc" id="hex2hsl-desc">
+            This converts the given HEX value to its corresponding HSL value <br>
+            <a href="./converters/hex2hsl/hex2hsl.html" target="_blank">Go to HEX2HSL</a>
+         </div>
+         <!-- HSL 2 HEX -->
+         <div class="accordion" id="hsl2hex-container" onclick="showDesc(this.id)">
+            <span> HSL2HEX Converter </span>
+            <i class="fa fa-plus" id="hsl2hex-plus"></i>
+         </div>
+         <div class="desc" id="hsl2hex-desc">
+            This converts the given HSL value to its corresponding HEX value <br>
+            <a href="./converters/hsl2hex/hsl2hex.html" target="_blank">Go to HSL2HEX</a>
+         </div>
+      </div>
+      <div>
+         Get to know about more colors using my <a href="https://colour-picker-by-rohith.herokuapp.com/"
+            target="_blank">Color Picker</a>
+      </div>
+   </div>
+
+   <div id="written-by-container">
+      <h3>Written by <a href="https://github.com/rohithpala" target="_blank">Rohith Pala</a> with &hearts;.</h3>
+      <h3>You can find the code of this project
+         <a href="https://github.com/rohithpala/WebDev/tree/main/HTML-CSS-JS-Projects/color-code-converter"
+            target="_blank">here</a>
+      </h3>
+   </div>
+</body>
+
+</html>

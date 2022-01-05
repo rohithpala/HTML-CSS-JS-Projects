@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>HSL2HEX Converter</title>
+   <link rel="stylesheet" href="hsl2hex.css">
+   <script src="hsl2hex.js" defer></script>
+</head>
+
+<body>
+   <div id="main">
+      <h1>HSL to HEX Converter</h1>
+
+      <table id="hsl-container">
+         <tr>
+            <td>Hue (H):</td>
+            <td id="h"><input id="h-input" type="number" value="0" min="0" max="359"
+                  oninput="syncInputs(this.id, this.value) "> <sup>°</sup></td>
+         </tr>
+         <tr>
+            <td>Saturation (S):</td>
+            <td id="s"><input id="s-input" type="number" value="0" min="0" max="100"
+                  oninput="syncInputs(this.id, this.value)"> %</td>
+         </tr>
+         <tr>
+            <td>Lightness (L):</td>
+            <td id="l"><input id="l-input" type="number" value="100" min="0" max="100"
+                  oninput="syncInputs(this.id, this.value)"> %</td>
+         </tr>
+         <tr>
+            <td>HSL:</td>
+            <td id="hsl">
+               hsl(
+               <input id="h-hsl" type="number" value="0" min="0" max="359" oninput="syncInputs(this.id, this.value) ">
+               <sup>°</sup> ,
+               <input id="s-hsl" type="number" value="0" min="0" max="100" oninput="syncInputs(this.id, this.value)"> %
+               ,
+               <input id="l-hsl" type="number" value="100" min="0" max="100" oninput="syncInputs(this.id, this.value)">
+               %
+               )
+            </td>
+         </tr>
+      </table>
+
+      <div id="btn-container">
+         <button id="convert-button">Convert to HEX</button>
+      </div>
+
+      <div id="hex-container">
+         <label for="hex">HEX:</label>
+         <div>
+            <input type="text" id="hash" value="#" readonly>
+            <input type="text" id="hex" value="ffffff" readonly>
+         </div>
+      </div>
+
+      <div id="color-panel"></div>
+   </div>
+
+   <span id="back">Go back to <a href="../../color-code-converter.html"> Homepage </a></span>
+</body>
+
+</html>
