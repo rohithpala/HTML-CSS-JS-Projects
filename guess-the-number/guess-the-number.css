@@ -1,0 +1,123 @@
+* {
+  font-family: "Poppins", "Times New Roman", "Arial";
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #3e3e3e;
+  min-height: 100vh;
+}
+
+#choice-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 750px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+#guessed-number-container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #069;
+  padding: 3rem;
+  display: none;
+}
+
+#your-turn-text,
+#go {
+  display: none;
+}
+
+#user-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #07a;
+  width: 100%;
+  padding: 2rem 0;
+  display: none;
+}
+
+#user-number-input {
+  width: 500px;
+  height: 50px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#chances,
+#chances-left {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#chances-left {
+  background-color: #2e2e2e;
+  padding: 2px 5px;
+}
+
+.button {
+  color: #fff;
+  background-color: transparent;
+  padding: 5px 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #1e1e1e;
+  transition: 1s;
+}
+
+#go {
+  margin-top: 20px;
+}
+
+#submit-button {
+  margin-top: 30px;
+}
+
+#previous-guesses-para {
+  margin-top: 10px;
+}
+
+#start-over {
+  display: none;
+  margin-top: 20px;
+}
+
+#written-by-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 5px;
+}
+
+#written-by-container a {
+  color: #fff;
+}
