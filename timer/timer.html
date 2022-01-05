@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Timer</title>
+
+     <link rel="stylesheet" href="timer.css">
+     <script src="timer.js"></script>
+
+     <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+     <div id="main">
+          <h1 id="heading">Timer</h1>
+          <div id="hr-min-sec-container">
+               <div id="hr-container">
+                    <label for="hours">Hr</label>
+                    <input type="number" id="hours" value="0" min="0" oninput="inputChanged(this.id)">
+               </div>
+               <pre> : </pre>
+               <div id="min-container">
+                    <label for="minutes">Min</label>
+                    <input type="number" id="minutes" value="0" min="0" max="59" oninput="inputChanged(this.id)">
+               </div>
+               <pre> : </pre>
+               <div id="sec-container">
+                    <label for="seconds">Sec</label>
+                    <input type="number" id="seconds" value="0" min="0" max="59" oninput="inputChanged(this.id)">
+               </div>
+          </div>
+          <div id="buttons-container">
+               <button class="button" id="reset" onclick="reset()">Reset</button>
+               <button class="button" id="start" onclick="startTimer(this)">Start</button>
+          </div>
+
+          <audio id="audio">
+               <source src="timer-completed-alerts/timer1.mp3" type="audio/mpeg">
+               Your browser does not support the audio element.
+          </audio>
+
+          <div id="alert-container">
+               <p>Select an audio to play when timer completes</p>
+               <div>
+                    <select id="alert-audio-select" onchange="setAudio()">
+                         <option value="1">Timer 1</option>
+                         <option value="2">Timer 2</option>
+                         <option value="3">Timer 3</option>
+                         <option value="4">Timer 4</option>
+                    </select>
+
+                    <i class="fas fa-play" onclick="playAudio()"></i>
+                    <!-- <i class="fas fa-pause" onclick=""></i> -->
+               </div>
+          </div>
+     </div>
+</body>
+
+</html>
