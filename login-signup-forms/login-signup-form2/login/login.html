@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Login to EazyFinder</title>
+
+	<link rel="stylesheet" href="login.css" />
+	<script src="login.js" defer></script>
+
+	<!-- <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+	<div id="main">
+		<form id="form" action="https://www.github.com" method="post" onsubmit="checkCredentials()">
+			<span id="login-title">Login to <a id="eazy-finder" href="../about.html">EazyFidner</a></span>
+			<div id="email-address-container">
+				<label for="email-address">Email Address:</label>
+				<input type="text" class="fields" id="email-address" placeholder="Email Address" />
+			</div>
+
+			<div id="password-container">
+				<label for="password">Password:</label>
+				<input type="password" class="fields" id="password" placeholder="Password" />
+			</div>
+
+			<span id="error"></span>
+
+			<input type="submit" id="button" value="Login" />
+		</form>
+
+		<span id="signup-link">
+			Don't have an Account? <a href="../signup/signup.html">Sign Up</a>
+		</span>
+	</div>
+</body>
+
+</html>

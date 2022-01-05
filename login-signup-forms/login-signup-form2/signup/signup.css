@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+}
+
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#sign-up-title {
+  font-size: large;
+  font-weight: bold;
+}
+
+#eazy-finder {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+}
+
+#eazy-finder::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+#eazy-finder:hover::after {
+  width: 100%;
+}
+
+#form {
+  width: 400px;
+  height: 320px;
+  color: #fff;
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 25px 0;
+}
+
+.fields {
+  width: 250px;
+  height: 30px;
+  font-weight: bold;
+  padding: 0 10px;
+  outline: none;
+}
+
+.fields::placeholder {
+  font-weight: normal;
+}
+
+#email-address-container,
+#password-container,
+#re-password-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.field-and-error-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#email-error,
+#password-error,
+#re-password-error {
+  visibility: hidden;
+  color: #f00;
+  font-size: small;
+}
+
+#button {
+  width: fit-content;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 4px 20px;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: #3e3e3e;
+  transition: 0.2s;
+}
+
+#signup-link {
+  color: #000;
+}
