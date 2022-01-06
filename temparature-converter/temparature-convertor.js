@@ -67,8 +67,8 @@ function reaumurOnInput() {
    let Re = reaumur.value;
    if (Re !== "") {
       Re = parseInt(Re);
-      celsius.value = (Re - 273.15).toFixed(2);
-      farenheit.value = ((Re - 273.15) * 1.8 + 32).toFixed(1);
+      celsius.value = (Re / 0.8).toFixed(2);
+      farenheit.value = ((Re * 2.25) + 32).toFixed(1);
       kelvin.value = ((Re * 1.25) + 273.15).toFixed(2);
       rankine.value = ((Re * 2.25) + 491.670).toFixed(2);
    } else {
