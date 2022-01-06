@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Speech Recognition</title>
+
+   <link rel="stylesheet" href="speech-recognition.css">
+   <script src="speech-recognition.js" defer></script>
+</head>
+
+<body>
+   <main>
+      <h1>Speech to Text</h1>
+
+      <div id="container">
+         <textarea id="content" cols="100" rows="7"></textarea>
+         <p id="condition">Voice Recognition not Started</p>
+      </div>
+
+      <div>
+         <button class="btn" id="start-button">Recognize Speech</button>
+         <button class="btn" id="stop-button">Stop Recognizing Speech</button>
+      </div>
+
+      <p id="confidence"></p>
+   </main>
+
+   <div id="url-modal-container">
+      <div id="url-modal">
+         <label for="url">URL:</label>
+         <input type="text" id="url">
+         <button class="button" id="open-button">Open</button>
+      </div>
+   </div>
+</body>
+
+</html>
