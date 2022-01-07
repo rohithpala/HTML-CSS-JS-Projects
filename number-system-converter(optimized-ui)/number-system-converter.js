@@ -9,6 +9,12 @@ const octalError = document.getElementById("octal-error");
 const hexadecimalError = document.getElementById("hexadecimal-error");
 
 let fromValue, emptyOtherFields;
+const hideAllErrors = () => {
+   binaryError.style.display = "none";
+   decimalError.style.display = "none";
+   octalError.style.display = "none";
+   hexadecimalError.style.display = "none";
+}
 
 binary.addEventListener("input", function () {
    emptyOtherFields = () => {
@@ -19,9 +25,10 @@ binary.addEventListener("input", function () {
 
    fromValue = binary.value;
    if (fromValue === "") {
+      binaryError.style.display = "none";
       emptyOtherFields();
    } else if (/^[01]*$/.test(fromValue)) {
-      binaryError.style.display = "none";
+      hideAllErrors();
       decimal.value = parseInt(fromValue, 2);
       octal.value = parseInt(fromValue, 2).toString(8);
       hexadecimal.value = parseInt(fromValue, 2).toString(16).toUpperCase();
@@ -41,9 +48,10 @@ decimal.addEventListener("input", function () {
 
    fromValue = decimal.value;
    if (fromValue === "") {
+      decimalError.style.display = "none";
       emptyOtherFields();
    } else if (/^[0-9]*$/.test(fromValue)) {
-      decimalError.style.display = "none";
+      hideAllErrors();
       binary.value = Math.abs(fromValue).toString(2);
       octal.value = Math.abs(fromValue).toString(8);
       hexadecimal.value = Math.abs(fromValue).toString(16).toUpperCase();
@@ -63,9 +71,10 @@ octal.addEventListener("input", function () {
 
    fromValue = octal.value;
    if (fromValue === "") {
+      octalError.style.display = "none";
       emptyOtherFields();
    } else if (/^[0-7]*$/.test(fromValue)) {
-      octalError.style.display = "none";
+      hideAllErrors();
       binary.value = parseInt(fromValue, 8).toString(2);
       decimal.value = parseInt(fromValue, 8);
       hexadecimal.value = parseInt(fromValue, 8).toString(16).toUpperCase();
@@ -85,9 +94,10 @@ hexadecimal.addEventListener("input", function () {
 
    fromValue = hexadecimal.value;
    if (fromValue === "") {
+      hexadecimalError.style.display = "none";
       emptyOtherFields();
    } else if (/^[0-9a-fA-F]*$/.test(fromValue)) {
-      hexadecimalError.style.display = "none";
+      hideAllErrors();
       binary.value = parseInt(fromValue, 16).toString(2);
       decimal.value = parseInt(fromValue, 16);
       octal.value = parseInt(fromValue, 16).toString(8);

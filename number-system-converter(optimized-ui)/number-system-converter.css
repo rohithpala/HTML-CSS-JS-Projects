@@ -44,7 +44,7 @@ input {
   border: none;
   border-radius: 8px;
   outline: none;
-  letter-spacing: 1mm;
+  letter-spacing: 4px;
   transition: 0.5s;
 }
 
@@ -152,4 +152,5 @@ th,
 td {
   border: 1px solid #fff;
   padding: 8px;
+  letter-spacing: 2px;
 }
