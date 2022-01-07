@@ -16,20 +16,20 @@ main {
 
 body {
   background-image: linear-gradient(
-    43deg,
-    #4158d0 0%,
-    #c850c0 46%,
-    #ffcc70 100%
+    214deg,
+    #00dbde 14%,
+    #fc00ff 46%,
+    #00ffa5 86%
   );
   min-height: 100vh;
 }
 
 main {
   background-image: linear-gradient(
-    to bottom,
+    180deg,
     #ffce00,
     #f7a800,
-    #585858
+    rgb(110, 110, 110)
   );
   padding: 120px 100px;
   border-radius: 10px;
@@ -72,4 +72,18 @@ input:focus {
 
 #convert-button:active {
   transform: scale(0.9);
+}
+
+#input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#error {
+  display: none;
+  color: #f00;
+  font-size: small;
+  margin: 0 0 10px 30px;
+  text-align: start;
 }
