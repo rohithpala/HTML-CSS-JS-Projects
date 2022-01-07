@@ -5,6 +5,7 @@ const b = document.getElementById("b");
 const h = document.getElementById("h");
 const s = document.getElementById("s");
 const l = document.getElementById("l");
+const color = document.getElementById("color").style;
 
 hex.addEventListener("input", handleHEX);
 
@@ -98,6 +99,7 @@ let hexValue, rValue, gValue, bValue, hValue, sValue, lValue;
 let rgb, hsl, min, max;
 
 function handleHEX() {
+   hex.value = hex.value.toUpperCase();
    hexValue = hex.value;
    if (hexValue.length === 6 && /^[0-9a-fA-F]*$/.test(hexValue)) {
       // HEX to RGB
@@ -111,38 +113,40 @@ function handleHEX() {
       h.value = hsl.h.toFixed(5);
       s.value = hsl.s.toFixed(5);
       l.value = hsl.l.toFixed(5);
+
+      color.backgroundColor = "#" + hex.value;
    } else {
+      color.backgroundColor = "transparent";
       r.value = g.value = b.value = h.value = s.value = l.value = "";
    }
 }
 
-function handleRGB(e) {
+function handleRGB() {
    rValue = r.value;
    gValue = g.value;
    bValue = b.value;
-   if (rValue !== "" && gValue !== "" && bValue !== "" && e.target.value >= 0 && e.target.value <= 255) {
+
+   if (rValue !== "" && gValue !== "" && bValue !== "" &&
+      rValue >= 0 && rValue <= 255 && gValue >= 0 && gValue <= 255 && bValue >= 0 && bValue <= 255) {
       // RGB to HEX
-      hex.value = rgb2hex(rValue, gValue, bValue);
+      hex.value = rgb2hex(rValue, gValue, bValue).toUpperCase();
 
       // RGB to HSL
       hsl = rgb2hsl(rValue, gValue, bValue);
       h.value = hsl.h.toFixed(5);
       s.value = hsl.s.toFixed(5);
       l.value = hsl.l.toFixed(5);
+
+      color.backgroundColor = "#" + hex.value;
    } else {
+      color.backgroundColor = "transparent";
       hex.value = h.value = s.value = l.value = "";
    }
 }
 
 function handleHSL(e) {
-   min = parseInt(e.target.min);
-   max = parseInt(e.target.max);
-   const eValue = parseInt(e.target.value);
-
-   console.log(min, max, eValue);
-
-   if (h.value !== "" && s.value !== "" && l.value !== "" && min <= eValue && eValue <= max) {
-      console.log(1);
+   if (h.value !== "" && s.value !== "" && l.value !== "" &&
+      hValue >= 0 && hValue <= 359 && sValue >= 0 && sValue <= 100 && lValue >= 0 && lValue <= 100) {
       // HSL to RGB
       rgb = hsl2rgb(h.value, s.value, l.value);
       r.value = rgb.r.toFixed(5);
@@ -150,8 +154,11 @@ function handleHSL(e) {
       b.value = rgb.b.toFixed(5);
 
       // RGB to HEX
-      hex.value = rgb2hex(rgb.r, rgb.g, rgb.b);
+      hex.value = rgb2hex(rgb.r, rgb.g, rgb.b).toUpperCase();
+
+      color.backgroundColor = "#" + hex.value;
    } else {
+      color.backgroundColor = "transparent";
       hex.value = r.value = g.value = b.value = "";
    }
 }
