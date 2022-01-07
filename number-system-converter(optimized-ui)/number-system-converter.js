@@ -97,3 +97,24 @@ hexadecimal.addEventListener("input", function () {
       emptyOtherFields();
    }
 });
+
+const bin2oct = document.getElementById("bin2oct");
+const bin2octTable = document.getElementById("bin-oct-container");
+const bin2hex = document.getElementById("bin2hex");
+const bin2hexTable = document.getElementById("bin-hex-container");
+
+bin2oct.addEventListener("click", function () {
+   if (bin2octTable.style.maxHeight) {
+      bin2octTable.style.maxHeight = null;
+   } else {
+      bin2octTable.style.maxHeight = bin2octTable.scrollHeight + "px";
+   }
+});
+
+bin2hex.addEventListener("click", function () {
+   if (bin2hexTable.style.maxHeight) {
+      bin2hexTable.style.maxHeight = null;
+   } else {
+      bin2hexTable.style.maxHeight = bin2hexTable.scrollHeight + "px";
+   }
+});
