@@ -8,18 +8,50 @@
    <title>Weight Converter</title>
 
    <link rel="stylesheet" href="weight-converter.css">
-   <script src="weight-converter.js"></script>
+   <script src="weight-converter.js" defer></script>
 </head>
 
 <body>
    <main>
+      <h1>Weight Converter</h1>
 
+      <div id="table-container">
+         <table>
+            <tr>
+               <td>Millgram:</td>
+               <td><input type="number" step="0.01" min="0" id="milligram" class="input" placeholder="Millgram"></td>
+            </tr>
+            <tr>
+               <td>Ounce:</td>
+               <td><input type="number" step="0.01" min="0" id="ounce" class="input" placeholder="Ounce"></td>
+            </tr>
+            <tr>
+               <td>Pound:</td>
+               <td><input type="number" step="0.01" min="0" id="pound" class="input" placeholder="Pound"></td>
+            </tr>
+         </table>
+
+         <table>
+            <tr>
+               <td>Grams:</td>
+               <td><input type="number" step="0.01" min="0" id="gram" class="input" placeholder="Gram"></td>
+            </tr>
+            <tr>
+               <td>Kilogram:</td>
+               <td><input type="number" step="0.01" min="0" id="kilogram" class="input" placeholder="Kilogram"></td>
+            </tr>
+            <tr>
+               <td>Tonne:</td>
+               <td><input type="number" step="0.01" min="0" id="tonne" class="input" placeholder="Tonne"></td>
+            </tr>
+         </table>
+      </div>
    </main>
 
-   <div id='written-by-container'>
-      <h3>Written by <a href='https://github.com/rohithpala' target='_blank'>Rohith Pala</a> with &hearts;.</h3>
+   <div id="written-by-container">
+      <h3>Written by <a href="https://github.com/rohithpala" target="_blank">Rohith Pala</a> with &hearts;.</h3>
       <h3>You can find the code of this project
-         <a href='' target='_blank'>here</a>
+         <a href="https://github.com/rohithpala/JavaScript-Projects/tree/main/weight-converter" target="_blank">here</a>
       </h3>
    </div>
 </body>
