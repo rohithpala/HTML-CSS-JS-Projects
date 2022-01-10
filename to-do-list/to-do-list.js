@@ -1,14 +1,14 @@
-const itemInput = document.getElementById('item-input');
-const add = document.getElementById('add');
-const list = document.getElementById('list');
-const remove = document.getElementById('remove');
+const itemInput = document.getElementById("item-input");
+const add = document.getElementById("add");
+const list = document.getElementById("list");
+const remove = document.getElementById("remove");
 
 function addItem() {
-	const errorMsg = document.getElementById('error-message').style;
+	const errorMsg = document.getElementById("error-message").style;
 	if (itemInput.value.trim() === "") {
-		errorMsg.display = 'inherit'
+		errorMsg.display = "inherit";
 	} else {
-		errorMsg.display = 'none';
+		errorMsg.display = "none";
 		list.innerHTML += `
                <div class="item-container">
                     <input type="checkbox" class="cb td" oninput="setCompleted()">
@@ -21,8 +21,8 @@ function addItem() {
 
 function removeItem() {
 	if (list.innerHTML != "") {
-		const containers = list.querySelectorAll('.item-container');
-		const itemCBs = list.querySelectorAll('.cb');
+		const containers = list.querySelectorAll(".item-container");
+		const itemCBs = list.querySelectorAll(".cb");
 		const len = itemCBs.length;
 		let i;
 		for (i = 0; i < len; i++)
@@ -38,13 +38,13 @@ function clearList() {
 
 function addCompletedItem() {
 	if (list.innerHTML != "") {
-		const items = list.querySelectorAll('.list-item');
-		const itemCBs = list.querySelectorAll('.cb');
+		const items = list.querySelectorAll(".list-item");
+		const itemCBs = list.querySelectorAll(".cb");
 		const len = items.length;
 		let i;
 		for (i = 0; i < len; i++) {
-			if (itemCBs[i].checked && items[i].style.textDecoration === 'line-through') {
-				items[i].style.textDecoration = 'inherit';
+			if (itemCBs[i].checked && items[i].style.textDecoration === "line-through") {
+				items[i].style.textDecoration = "inherit";
 				itemCBs[i].checked = false;
 			}
 		}
@@ -53,13 +53,13 @@ function addCompletedItem() {
 
 function markAsCompleted() {
 	if (list.innerHTML != "") {
-		const items = list.querySelectorAll('.list-item');
-		const itemCBs = list.querySelectorAll('.cb');
+		const items = list.querySelectorAll(".list-item");
+		const itemCBs = list.querySelectorAll(".cb");
 		const len = items.length;
 		let i;
 		for (i = 0; i < len; i++) {
 			if (itemCBs[i].checked)
-				items[i].style.textDecoration = 'line-through';
+				items[i].style.textDecoration = "line-through";
 		}
 	}
 }
