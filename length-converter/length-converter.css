@@ -24,6 +24,10 @@ body {
   );
 }
 
+main h1 {
+  color: #efefef;
+}
+
 #table-container {
   display: flex;
   justify-content: center;
@@ -54,6 +58,7 @@ table {
   min-width: 70%;
   margin: 10px;
   table-layout: auto;
+  padding-left: 10px;
 }
 
 #written-by-container {
