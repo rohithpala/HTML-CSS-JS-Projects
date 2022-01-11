@@ -92,13 +92,13 @@ yard.addEventListener("input", function () {
    if (inputValue === "") {
       emptyAllFields();
    } else {
-      millimeter.value = inputValue;
-      centimeter.value = inputValue;
-      meter.value = inputValue;
-      kilometer.value = inputValue;
-      mile.value = inputValue;
-      feet.value = inputValue;
-      inch.value = inputValue;
+      millimeter.value = inputValue * 914.4;
+      centimeter.value = inputValue * 91.44;
+      meter.value = inputValue / 1.094;
+      kilometer.value = inputValue / 1094;
+      mile.value = inputValue / 1760;
+      feet.value = inputValue * 3;
+      inch.value = inputValue * 36;
    }
 });
 
@@ -107,13 +107,13 @@ feet.addEventListener("input", function () {
    if (inputValue === "") {
       emptyAllFields();
    } else {
-      millimeter.value = inputValue;
-      centimeter.value = inputValue;
-      meter.value = inputValue;
-      kilometer.value = inputValue;
-      mile.value = inputValue;
-      yard.value = inputValue;
-      inch.value = inputValue;
+      millimeter.value = inputValue * 304.8;
+      centimeter.value = inputValue * 30.48;
+      meter.value = inputValue / 3.281;
+      kilometer.value = inputValue / 3281;
+      mile.value = inputValue / 5280;
+      yard.value = inputValue / 3;
+      inch.value = inputValue * 12;
    }
 });
 
@@ -122,12 +122,12 @@ inch.addEventListener("input", function () {
    if (inputValue === "") {
       emptyAllFields();
    } else {
-      millimeter.value = inputValue;
-      centimeter.value = inputValue;
-      meter.value = inputValue;
-      kilometer.value = inputValue;
-      mile.value = inputValue;
-      yard.value = inputValue;
-      feet.value = inputValue;
+      millimeter.value = inputValue * 25.4;
+      centimeter.value = inputValue * 2.54;
+      meter.value = inputValue / 39.37;
+      kilometer.value = inputValue / 39370;
+      mile.value = inputValue / 63360;
+      yard.value = inputValue / 36;
+      feet.value = inputValue / 12;
    }
 });
