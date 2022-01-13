@@ -24,7 +24,7 @@ body {
   padding: 1rem;
 }
 
-#main {
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
