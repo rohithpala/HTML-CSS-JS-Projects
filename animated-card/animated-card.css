@@ -20,12 +20,12 @@ body {
 }
 
 #card {
-  color: #000100;
+  color: #000;
   max-width: 20rem;
   text-align: center;
   background-color: rgb(219, 219, 219);
   padding: 100px 20px;
-  box-shadow: 0 15px 25px #000100;
+  box-shadow: 0 15px 25px #000;
 }
 
 #card:hover {
