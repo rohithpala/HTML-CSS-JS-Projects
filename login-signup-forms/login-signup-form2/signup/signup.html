@@ -2,53 +2,52 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Sign Up to EazyFinder</title>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Sign Up to EazyFinder</title>
 
-	<link rel="stylesheet" href="signup.css" />
-	<script src="signup.js" defer></script>
+   <link rel="stylesheet" href="signup.css" />
+   <script src="signup.js" defer></script>
 
-	<!-- <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script> -->
+   <!-- <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
-	<div id="main">
-		<form id="form" action="https://www.github.com" method="post">
-			<span id="sign-up-title">Sign Up to <a id="eazy-finder" href="../about.html">EazyFidner</a></span>
-			<div id="email-address-container">
-				<label for="email-address">Email Address:</label>
-				<div class="field-and-error-container">
-					<input type="text" class="fields" id="email-address" placeholder="Email Address" />
-					<span id="email-error">.</span>
-				</div>
-			</div>
+   <div id="main">
+      <form id="form" action="https://www.github.com" method="post">
+         <span id="sign-up-title">Sign Up to <a id="eazy-finder" href="../about.html">EazyFidner</a></span>
+         <div id="email-address-container">
+            <label for="email-address">Email Address:</label>
+            <div class="field-and-error-container">
+               <input type="text" class="fields" id="email-address" placeholder="Email Address" />
+               <span id="email-error">.</span>
+            </div>
+         </div>
 
-			<div id="password-container">
-				<label for="password">Password:</label>
-				<div class="field-and-error-container">
-					<input type="password" class="fields" id="password" placeholder="Password"
-						onblur="checkPassword()" />
-					<span id="password-error">.</span>
-				</div>
-			</div>
+         <div id="password-container">
+            <label for="password">Password:</label>
+            <div class="field-and-error-container">
+               <input type="password" class="fields" id="password" placeholder="Password" onblur="checkPassword()" />
+               <span id="password-error">.</span>
+            </div>
+         </div>
 
-			<div id="re-password-container">
-				<label for="re-password">Retype Password:</label>
-				<div class="field-and-error-container">
-					<input type="password" class='fields' id="re-password" placeholder="Re-type Password">
-					<span id="re-password-error">.</span>
-				</div>
-			</div>
+         <div id="re-password-container">
+            <label for="re-password">Retype Password:</label>
+            <div class="field-and-error-container">
+               <input type="password" class="fields" id="re-password" placeholder="Re-type Password">
+               <span id="re-password-error">.</span>
+            </div>
+         </div>
 
-			<input type="submit" id="button" value="Sign Up" />
-		</form>
+         <input type="submit" id="button" value="Sign Up" />
+      </form>
 
-		<span id="signup-link">
-			Already have an Account? <a href="../login/login.html">Login</a>
-		</span>
-	</div>
+      <span id="signup-link">
+         Already have an Account? <a href="../login/login.html">Login</a>
+      </span>
+   </div>
 </body>
 
 </html>

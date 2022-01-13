@@ -2,47 +2,46 @@
 <html lang="en">
 
 <head>
-     <meta charset="UTF-8" />
-     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-     <title>Login/SignUp Form</title>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Login/SignUp Form</title>
 
-     <link rel="stylesheet" href="login-signup-form.css" />
-     <script src="login-signup-form.js"></script>
+   <link rel="stylesheet" href="login-signup-form.css" />
+   <script src="login-signup-form.js"></script>
 
-     <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
+   <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-     <div id="main">
-          <div id="login-signup-links">
-               <span href="#" id="login-link" onclick="change('login')">Login</span>
-               <span href="#" id="signup-link" onclick="change('signup')">SignUp</span>
-          </div>
+   <div id="main">
+      <div id="login-signup-links">
+         <span href="#" id="login-link" onclick="change('login')">Login</span>
+         <span href="#" id="signup-link" onclick="change('signup')">SignUp</span>
+      </div>
 
-          <!-- <form id="form" action="https://www.github.com" method="post"> -->
-          <div id="form">
-               <div id="email-address-container">
-                    <label for="email-address">Email Address:</label>
-                    <input type="email" class="fields" id="email-address" placeholder="Email Address" />
-               </div>
+      <!-- <form id="form" action="https://www.github.com" method="post"> -->
+      <div id="form">
+         <div id="email-address-container">
+            <label for="email-address">Email Address:</label>
+            <input type="email" class="fields" id="email-address" placeholder="Email Address" />
+         </div>
 
-               <div id="password-container">
-                    <label for="password">Password:</label>
-                    <div>
-                         <input type="password" class="fields" id="password" placeholder="Password" />
-                         <span id="password-range-error"></span>
-                         <i class="fas fa-eye toggle-password" id="eye-open" onclick="togglePassword('password')"></i>
-                         <i class="fas fa-eye-slash toggle-password" id="eye-close"
-                              onclick="togglePassword('password')"></i>
-                    </div>
-               </div>
+         <div id="password-container">
+            <label for="password">Password:</label>
+            <div>
+               <input type="password" class="fields" id="password" placeholder="Password" />
+               <span id="password-range-error"></span>
+               <i class="fas fa-eye toggle-password" id="eye-open" onclick="togglePassword('password')"></i>
+               <i class="fas fa-eye-slash toggle-password" id="eye-close" onclick="togglePassword('password')"></i>
+            </div>
+         </div>
 
-               <button id="button">Login</button>
-          </div>
-          <!-- <input type="submit" id="button" value="Login" /> -->
-          <!-- </form> -->
-     </div>
+         <button id="button">Login</button>
+      </div>
+      <!-- <input type="submit" id="button" value="Login" /> -->
+      <!-- </form> -->
+   </div>
 </body>
 
 </html>
