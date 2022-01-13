@@ -20,21 +20,21 @@ function getContainerIDs() {
    if (expCol.innerText === "Expand All") {
       expCol.innerText = "Collapse All";
       for (i = 0; i < len; i++) {
-         expand(document.getElementById(ids[i].id.split('-')[0] + "-desc"),
-            document.getElementById(ids[i].id.split('-')[0] + "-plus").style);
+         expand(document.getElementById(ids[i].id.split("-")[0] + "-desc"),
+            document.getElementById(ids[i].id.split("-")[0] + "-plus").style);
       }
    } else {
       expCol.innerText = "Expand All";
       for (i = 0; i < len; i++) {
-         collapse(document.getElementById(ids[i].id.split('-')[0] + "-desc"),
-            document.getElementById(ids[i].id.split('-')[0] + "-plus").style);
+         collapse(document.getElementById(ids[i].id.split("-")[0] + "-desc"),
+            document.getElementById(ids[i].id.split("-")[0] + "-plus").style);
       }
    }
 }
 
 function showDesc(converterID) {
-   const desc = document.getElementById(converterID.split('-')[0] + "-desc");
-   const plusStyle = document.getElementById(converterID.split('-')[0] + "-plus").style;
+   const desc = document.getElementById(converterID.split("-")[0] + "-desc");
+   const plusStyle = document.getElementById(converterID.split("-")[0] + "-plus").style;
    if (desc.style.maxHeight) {
       collapse(desc, plusStyle);
    } else {
