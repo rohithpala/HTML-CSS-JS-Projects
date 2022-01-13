@@ -75,7 +75,7 @@ label[for="kelvin"] {
   margin: 15px;
 }
 
-.btn {
+.button {
   color: #fff;
   background-color: transparent;
   margin: 10px;
@@ -87,12 +87,12 @@ label[for="kelvin"] {
   transition: 0.3s transform;
 }
 
-.btn:hover {
+.button:hover {
   color: #000;
   background-color: #fff;
 }
 
-.btn:active {
+.button:active {
   transform: scale(0.9);
 }
 
@@ -106,7 +106,7 @@ label[for="kelvin"] {
   padding: 1rem;
   margin: 15px;
 }
-  
+
 #written-by-container a {
   color: #000;
 }
