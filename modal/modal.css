@@ -42,3 +42,18 @@ body {
   padding: 2rem;
   border-radius: 5px;
 }
+
+#written-by-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 5px;
+}
+
+#written-by-container a {
+  color: #000;
+}
