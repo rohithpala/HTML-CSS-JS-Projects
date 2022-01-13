@@ -7,7 +7,7 @@
 }
 
 body,
-#main {
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +19,7 @@ body {
   background-color: #1e1e1e;
 }
 
-#main {
+main {
   color: #fff;
   background-color: #3e3e3e;
   padding: 5rem;
@@ -27,7 +27,7 @@ body {
   border-radius: 10px;
 }
 
-#main h1{
+main h1{
   margin-bottom: 10px;
 }
 
