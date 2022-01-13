@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
   font-family: "Poppins", sans-serif;
@@ -7,7 +7,7 @@
 }
 
 body,
-#main {
+main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,7 +20,7 @@ body {
   background-color: #3e3e3e;
 }
 
-#main {
+main {
   background-color: #1e1e1e;
   padding: 3rem;
   border: 2px solid #fff;
