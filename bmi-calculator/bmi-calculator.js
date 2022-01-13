@@ -8,19 +8,19 @@ document.getElementById("calculate-button").addEventListener("click", function (
    type.style.visibility = "hidden";
 
    if (ht === "" || wt === "") {
-      if (ht === "" && wt === "") bmiElement.innerHTML = "<b>Provide Height and Weight</b>";
-      else if (ht === "") bmiElement.innerHTML = "<b>Provide Height</b>";
-      else if (wt === "") bmiElement.innerHTML = "<b>Provide Weight</b>";
+      if (ht === "" && wt === "") bmiElement.innerHTML = "<strong>Provide Height and Weight</strong>";
+      else if (ht === "") bmiElement.innerHTML = "<strong>Provide Height</strong>";
+      else if (wt === "") bmiElement.innerHTML = "<strong>Provide Weight</strong>";
    } else {
       ht /= 100;
       const bmi = (wt / (ht * ht)).toFixed(3);
-      bmiElement.innerHTML = "Your BMI is <b>" + bmi + "</b>";
+      bmiElement.innerHTML = "Your BMI is <strong>" + bmi + "</strong>";
 
       type.style.visibility = "visible";
-      if (bmi < 18.5) type.innerHTML = "<b>Underweight</b>";
-      else if (bmi >= 18.5 && bmi < 24.9) type.innerHTML = "<b>Normal</b>";
-      else if (bmi >= 24.9 && bmi < 29.9) type.innerHTML = "<b>Overweight</b>";
-      else if (bmi >= 29.9 && bmi < 34.9) type.innerHTML = "<b>Obese</b>";
-      else type.innerHTML = "<b>Extremely Obese</b>";
+      if (bmi < 18.5) type.innerHTML = "<strong>Underweight</strong>";
+      else if (bmi >= 18.5 && bmi < 24.9) type.innerHTML = "<strong>Normal</strong>";
+      else if (bmi >= 24.9 && bmi < 29.9) type.innerHTML = "<strong>Overweight</strong>";
+      else if (bmi >= 29.9 && bmi < 34.9) type.innerHTML = "<strong>Obese</strong>";
+      else type.innerHTML = "<strong>Extremely Obese</strong>";
    }
 });

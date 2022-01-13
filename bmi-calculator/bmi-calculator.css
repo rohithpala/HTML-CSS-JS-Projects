@@ -16,7 +16,6 @@ main {
 
 body {
   min-height: 100vh;
-  background-color: #6eff6d;
   background-image: linear-gradient(151deg, #6eff6d 0%, #cf7fff 100%);
 }
 
