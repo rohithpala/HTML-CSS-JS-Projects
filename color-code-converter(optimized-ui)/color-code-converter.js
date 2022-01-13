@@ -59,7 +59,6 @@ function rgb2hsl(r_, g_, b_) {
 
    s = (s * 100);
    l = (l * 100);
-
    return { h: h, s: s, l: l };
 }
 
