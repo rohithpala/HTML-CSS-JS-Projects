@@ -15,7 +15,7 @@ body {
   min-height: 100vh;
 }
 
-#main {
+main {
   color: #fff;
   background-color: #1e1e1e;
   display: flex;
@@ -107,4 +107,20 @@ body {
 .fa-play {
   color: #fff;
   cursor: pointer;
+}
+
+#written-by-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 5px;
+}
+  
+#written-by-container a {
+  color: #fff;
 }
