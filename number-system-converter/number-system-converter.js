@@ -2,7 +2,7 @@ const fromSelected = document.getElementById("from-select");
 const toSelected = document.getElementById("to-select");
 const from = document.getElementById("from-input");
 const to = document.getElementById("to-input");
-const error = document.getElementById('error');
+const error = document.getElementById("error");
 
 let fromNS = "Binary", toNS = "Binary";
 
