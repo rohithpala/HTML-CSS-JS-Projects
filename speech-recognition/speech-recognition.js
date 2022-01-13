@@ -66,6 +66,6 @@ stopButton.addEventListener("click", function () {
 });
 
 modalOpenButton.addEventListener("click", function () {
-   window.open(urlInput.value, '_blank').focus();
+   window.open(urlInput.value, "_blank").focus();
    modalStyle.display = "none"
 });
