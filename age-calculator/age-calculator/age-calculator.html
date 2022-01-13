@@ -2,100 +2,95 @@
 <html lang="en">
 
 <head>
-     <meta charset="UTF-8">
-     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Age Calculator</title>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Age Calculator</title>
 
-     <!-- CSS Links -->
-     <link rel="stylesheet" href="../common-codes/header.css">
-     <link rel="stylesheet" href="age-calculator.css">
-     <link rel="stylesheet" href="../common-codes/footer.css">
+   <!-- CSS Links -->
+   <link rel="stylesheet" href="../common-codes/header.css">
+   <link rel="stylesheet" href="age-calculator.css">
+   <link rel="stylesheet" href="../common-codes/footer.css">
 
-     <!-- JS -->
-     <script src="../common-codes/header-code.js" defer></script>
-     <script src="age-calculator.js"></script>
-     <script src="../common-codes/footer-code.js" defer></script>
+   <!-- JS -->
+   <script src="../common-codes/header-code.js" defer></script>
+   <script src="age-calculator.js"></script>
+   <script src="../common-codes/footer-code.js" defer></script>
 
-     <!-- FA Kit Code -->
-     <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
-
-     <!-- Poppins Font Links -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+   <!-- FA Kit Code -->
+   <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-     <!-- Header -->
-     <div id="header"></div>
+   <!-- Header -->
+   <div id="header"></div>
 
-     <div id="main">
-          <!-- Heading -->
-          <div id="heading">
-               <h1>Age Calculator:</h1>
-               <pre>  </pre>
-               <a href="../how-it-works/how-it-works.html"><i class="fas fa-info-circle" id="info"></i></a>
-          </div>
+   <div id="main">
+      <!-- Heading -->
+      <div id="heading">
+         <h1>Age Calculator:</h1>
+         <pre>  </pre>
+         <a href="../how-it-works/how-it-works.html"><i class="fas fa-info-circle" id="info"></i></a>
+      </div>
 
-          <!-- Date, Month, Year Fields -->
-          <div id="dmy-container">
-               <!-- Date -->
-               <div id="date-container">
-                    <label>Date:</label>
-                    <select id="date-dd" onclick="checkMonthAndYear()">
-                         <option value="select">Select Date</option>
-                         <script>
-                              const date = document.getElementById('date-dd');
-                              for (i = 1; i <= 31; i++) {
-                                   date.innerHTML += "<option value='" + i + "'>" + i + "</option>";
-                              }
-                         </script>
-                    </select>
-               </div>
+      <!-- Date, Month, Year Fields -->
+      <div id="dmy-container">
+         <!-- Date -->
+         <div id="date-container">
+            <label>Date:</label>
+            <select id="date-dd" onclick="checkMonthAndYear()">
+               <option value="select">Select Date</option>
+               <script>
+                  const date = document.getElementById("date-dd");
+                  for (i = 1; i <= 31; i++) {
+                     date.innerHTML += "<option value='" + i + "'>" + i + "</option>";
+                  }
+               </script>
+            </select>
+         </div>
 
-               <!-- Month -->
-               <div id="month-container">
-                    <label>Month:</label>
-                    <select id="month-dd" onchange="changeDate('month')">
-                         <option value="select">Select Month</option>
-                         <option value="1">January</option>
-                         <option value="2">February</option>
-                         <option value="3">March</option>
-                         <option value="4">April</option>
-                         <option value="5">May</option>
-                         <option value="6">June</option>
-                         <option value="7">July</option>
-                         <option value="8">August</option>
-                         <option value="9">September</option>
-                         <option value="10">October</option>
-                         <option value="11">November</option>
-                         <option value="12">December</option>
-                    </select>
-               </div>
+         <!-- Month -->
+         <div id="month-container">
+            <label>Month:</label>
+            <select id="month-dd" onchange="changeDate('month')">
+               <option value="select">Select Month</option>
+               <option value="1">January</option>
+               <option value="2">February</option>
+               <option value="3">March</option>
+               <option value="4">April</option>
+               <option value="5">May</option>
+               <option value="6">June</option>
+               <option value="7">July</option>
+               <option value="8">August</option>
+               <option value="9">September</option>
+               <option value="10">October</option>
+               <option value="11">November</option>
+               <option value="12">December</option>
+            </select>
+         </div>
 
-               <!-- Year -->
-               <div id="year-container">
-                    <label>Year:</label>
-                    <input id="year-ip" type="number" min="1" placeholder="Year" oninput="changeDate('year')">
-                    <script>
-                         document.getElementById('year-ip').setAttribute('max', new Date().getFullYear());
-                    </script>
-               </div>
-          </div>
+         <!-- Year -->
+         <div id="year-container">
+            <label>Year:</label>
+            <input id="year-ip" type="number" min="1" placeholder="Year" oninput="changeDate('year')">
+            <script>
+               document.getElementById("year-ip").setAttribute("max", new Date().getFullYear());
+            </script>
+         </div>
+      </div>
 
-          <!-- Calculate Button -->
-          <div id="btn-container">
-               <button id="age-button" type="submit" onclick="calculateAge()">Calculate Age</button>
-          </div>
+      <!-- Calculate Button -->
+      <div id="btn-container">
+         <button id="age-button" type="submit" onclick="calculateAge()">Calculate Age</button>
+      </div>
 
-          <div id="age-container">
-               <span id="age"></span>
-          </div>
-     </div>
+      <div id="age-container">
+         <span id="age"></span>
+      </div>
+   </div>
 
-     <!-- Footer -->
-     <div id="footer"></div>
+   <!-- Footer -->
+   <div id="footer"></div>
 </body>
 
 </html>

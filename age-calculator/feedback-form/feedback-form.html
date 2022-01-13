@@ -2,47 +2,42 @@
 <html lang="en">
 
 <head>
-     <title>Feedback Form</title>
+   <title>Feedback Form</title>
 
-     <!-- CSS links -->
-     <link rel="stylesheet" href="../common-codes/header.css">
-     <link rel="stylesheet" href="feedback-form.css">
-     <link rel="stylesheet" href="../common-codes/footer.css">
+   <!-- CSS links -->
+   <link rel="stylesheet" href="../common-codes/header.css">
+   <link rel="stylesheet" href="feedback-form.css">
+   <link rel="stylesheet" href="../common-codes/footer.css">
 
-     <!-- JS -->
-     <script src="feedback-form.js"></script>
-     <script src="../common-codes/header-code.js" defer></script>
-     <script src="../common-codes/footer-code.js" defer></script>
-     <script src="https://smtpjs.com/v3/smtp.js"></script>
+   <!-- JS -->
+   <script src="feedback-form.js"></script>
+   <script src="../common-codes/header-code.js" defer></script>
+   <script src="../common-codes/footer-code.js" defer></script>
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-     <!-- FA Kit Code -->
-     <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
-
-     <!-- Poppins Font Links -->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+   <!-- FA Kit Code -->
+   <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-     <!-- Header -->
-     <div id="header"></div>
+   <!-- Header -->
+   <div id="header"></div>
 
-     <!-- Feedback Form -->
-     <div id="feedback-div">
-          <p><u>Leave your Valuable Feedback here</u> :</p>
+   <!-- Feedback Form -->
+   <div id="feedback-div">
+      <p><u>Leave your Valuable Feedback here</u> :</p>
 
-          <textarea id="feedback-input" oninput="noOfCharactersLeft()" rows="10" cols="70"></textarea><br>
+      <textarea id="feedback-input" oninput="noOfCharactersLeft()" rows="10" cols="70"></textarea><br>
 
-          <p id="characters-left-para">You are left with <strong id="characters-left">500</strong> characters.</p>
+      <p id="characters-left-para">You are left with <strong id="characters-left">500</strong> characters.</p>
 
-          <button id="submit-button" type="submit" onclick="submitAlert()">Submit</button><br>
+      <button id="submit-button" type="submit" onclick="submitAlert()">Submit</button><br>
 
-          <p id="success-message">Your feedback is Successfully Submitted. Thank You for the valuable feedback</p>
-     </div>
+      <p id="success-message">Your feedback is Successfully Submitted. Thank You for the valuable feedback</p>
+   </div>
 
-     <!-- Footer -->
-     <div id="footer"></div>
+   <!-- Footer -->
+   <div id="footer"></div>
 </body>
 
 </html>
