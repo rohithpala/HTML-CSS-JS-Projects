@@ -32,3 +32,18 @@ body {
   max-height: 0;
   transition: max-height 0.4s ease-out;
 }
+
+#written-by-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 5px;
+}
+  
+#written-by-container a {
+  color: #000;
+}
