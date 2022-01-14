@@ -10,11 +10,12 @@
   color: rgb(255, 196, 0);
   font-weight: bold;
   text-decoration: none;
+  padding: 10px;
+  transition: 0.3s all;
 }
 
 #menu li a:hover {
-  background-color: rgb(255, 196, 0);
   color: #1e1e1e;
+  background-color: rgb(255, 196, 0);
   box-shadow: 5px 10px 38px #777676;
-  padding: 5px;
 }
