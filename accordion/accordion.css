@@ -33,6 +33,13 @@ body {
   transition: max-height 0.4s ease-out;
 }
 
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 #written-by-container {
   display: flex;
   flex-direction: column;
