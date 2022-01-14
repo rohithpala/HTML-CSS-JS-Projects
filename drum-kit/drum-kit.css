@@ -6,13 +6,9 @@
   padding: 0;
 }
 
-body,
-#keys-container {
+body {
   display: flex;
   justify-content: center;
-}
-
-body {
   background-color: #1e1e1e;
   flex-direction: column;
   min-height: 100vh;
@@ -21,14 +17,21 @@ body {
 #keys-container {
   display: flex;
   flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.keys-container-container {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .key {
   color: #fff;
-  width: 6rem;
-  margin: 1rem;
+  width: 7rem;
+  margin: 0.7rem;
   padding: 1rem 0.5rem;
   border: 0.25rem solid #aaa;
   font-size: 1.2rem;
@@ -51,4 +54,22 @@ body {
   transform: scale(1.1);
   border: 0.25rem solid #ffc600;
   box-shadow: 0 0 1rem #ffc600;
+}
+
+#recording-container {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 2rem;
+}
+
+#record {
+  margin-right: 10px;
+}
+
+input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
 }

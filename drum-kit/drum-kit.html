@@ -13,54 +13,105 @@
 
 <body>
    <div id="keys-container">
-      <div id="key-65" class="key">
-         <span class="letter">A</span>
-         <span class="sound">CLAP</span>
+      <div class="keys-container-container">
+         <div id="key-87" class="key">
+            <span class="letter">W</span>
+            <span class="sound">CRASH</span>
+         </div>
+         <div id="key-69" class="key">
+            <span class="letter">E</span>
+            <span class="sound">HITHAT-CLOSE</span>
+         </div>
+         <div id="key-82" class="key">
+            <span class="letter">R</span>
+            <span class="sound">HITHAT-OPEN</span>
+         </div>
+         <div id="key-84" class="key">
+            <span class="letter">T</span>
+            <span class="sound">TOM-HIGH</span>
+         </div>
+         <div id="key-89" class="key">
+            <span class="letter">Y</span>
+            <span class="sound">TOM-LOW</span>
+         </div>
+         <div id="key-85" class="key">
+            <span class="letter">U</span>
+            <span class="sound">TOM-MID</span>
+         </div>
+         <div id="key-73" class="key">
+            <span class="letter">I</span>
+            <span class="sound">SNARE-1</span>
+         </div>
+         <div id="key-79" class="key">
+            <span class="letter">O</span>
+            <span class="sound">KICK-1</span>
+         </div>
       </div>
-      <div id="key-83" class="key">
-         <span class="letter">S</span>
-         <span class="sound">HIHAT</span>
-      </div>
-      <div id="key-68" class="key">
-         <span class="letter">D</span>
-         <span class="sound">KICK</span>
-      </div>
-      <div id="key-70" class="key">
-         <span class="letter">F</span>
-         <span class="sound">OPENHAT</span>
-      </div>
-      <div id="key-71" class="key">
-         <span class="letter">G</span>
-         <span class="sound">BOOM</span>
-      </div>
-      <div id="key-72" class="key">
-         <span class="letter">H</span>
-         <span class="sound">RIDE</span>
-      </div>
-      <div id="key-74" class="key">
-         <span class="letter">J</span>
-         <span class="sound">SNARE</span>
-      </div>
-      <div id="key-75" class="key">
-         <span class="letter">K</span>
-         <span class="sound">TOM</span>
-      </div>
-      <div id="key-76" class="key">
-         <span class="letter">L</span>
-         <span class="sound">TINK</span>
+
+      <div class="keys-container-container">
+         <div id="key-65" class="key">
+            <span class="letter">A</span>
+            <span class="sound">CLAP</span>
+         </div>
+         <div id="key-83" class="key">
+            <span class="letter">S</span>
+            <span class="sound">HIHAT</span>
+         </div>
+         <div id="key-68" class="key">
+            <span class="letter">D</span>
+            <span class="sound">KICK-2</span>
+         </div>
+         <div id="key-70" class="key">
+            <span class="letter">F</span>
+            <span class="sound">OPENHAT</span>
+         </div>
+         <div id="key-71" class="key">
+            <span class="letter">G</span>
+            <span class="sound">BOOM</span>
+         </div>
+         <div id="key-72" class="key">
+            <span class="letter">H</span>
+            <span class="sound">RIDE</span>
+         </div>
+         <div id="key-74" class="key">
+            <span class="letter">J</span>
+            <span class="sound">SNARE-2</span>
+         </div>
+         <div id="key-75" class="key">
+            <span class="letter">K</span>
+            <span class="sound">TOM</span>
+         </div>
+         <div id="key-76" class="key">
+            <span class="letter">L</span>
+            <span class="sound">TINK</span>
+         </div>
       </div>
    </div>
 
+   <div id="recording-container">
+      <input type="checkbox" id="record">
+      <label for="record">Record</label>
+   </div>
+
    <div id="audio-container">
-      <audio id="audio-65" src="sounds/clap.wav"></audio>
-      <audio id="audio-83" src="sounds/hihat.wav"></audio>
-      <audio id="audio-68" src="sounds/kick.wav"></audio>
-      <audio id="audio-70" src="sounds/openhat.wav"></audio>
-      <audio id="audio-71" src="sounds/boom.wav"></audio>
-      <audio id="audio-72" src="sounds/ride.wav"></audio>
-      <audio id="audio-74" src="sounds/snare.wav"></audio>
-      <audio id="audio-75" src="sounds/tom.wav"></audio>
-      <audio id="audio-76" src="sounds/tink.wav"></audio>
+      <audio id="audio-87" src="audio/crash.wav"></audio>
+      <audio id="audio-69" src="audio/hihat-close.wav"></audio>
+      <audio id="audio-82" src="audio/hihat-open.wav"></audio>
+      <audio id="audio-84" src="audio/tom-high.wav"></audio>
+      <audio id="audio-89" src="audio/tom-low.wav"></audio>
+      <audio id="audio-85" src="audio/tom-mid.wav"></audio>
+      <audio id="audio-73" src="audio/snare2.wav"></audio>
+      <audio id="audio-79" src="audio/kick2.wav"></audio>
+
+      <audio id="audio-65" src="audio/clap.wav"></audio>
+      <audio id="audio-83" src="audio/hihat.wav"></audio>
+      <audio id="audio-68" src="audio/kick1.wav"></audio>
+      <audio id="audio-70" src="audio/openhat.wav"></audio>
+      <audio id="audio-71" src="audio/boom.wav"></audio>
+      <audio id="audio-72" src="audio/ride.wav"></audio>
+      <audio id="audio-74" src="audio/snare1.wav"></audio>
+      <audio id="audio-75" src="audio/tom.wav"></audio>
+      <audio id="audio-76" src="audio/tink.wav"></audio>
    </div>
 </body>
 
