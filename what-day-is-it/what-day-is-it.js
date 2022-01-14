@@ -98,7 +98,7 @@ function whatIsDay() {
 
       document.getElementById("day").innerText = DAYS[(date_odd_days + month_odd_days + year_odd_days - 1) % 7];
 
-      document.getElementById("main").style.paddingBottom = "0";
+      document.getElementsByTagName("main")[0].style.paddingBottom = "0";  
    }
 }
 
@@ -109,6 +109,6 @@ function reset() {
       document.getElementById("month-dd").value = "select";
       document.getElementById("year-ip").value = "";
       resultStyle.display = "none";
-      document.getElementById("main").style.paddingBottom = "2rem";
+      document.getElementsByTagName("main")[0].style.paddingBottom = "2rem";
    }
 }
