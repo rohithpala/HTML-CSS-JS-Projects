@@ -23,32 +23,32 @@ const OPERATORS = ["+", "-", "*", "/"];
 input.addEventListener("click", checkKey);
 
 function addInput(text) {
-     input.value += text;
+   input.value += text;
 }
 
 function checkKey(event) {
-     let keyPressed = event.key;
-     console.log(String.fromCharCode(keyPressed));
+   let keyPressed = event.key;
+   console.log(String.fromCharCode(keyPressed));
 }
 
 function setOutput() {
-     ;
+   ;
 }
 
 function clear() {
-     input.value = output.value = "";
+   input.value = output.value = "";
 }
 
 function handleBackspace() {
-     const val = input.value, position = input.selectionStart;
-     if (val) {
-          console.log(position);
-          input.value = val.substring(0, position - 1) + val.substring(position, val.length);
+   const val = input.value, position = input.selectionStart;
+   if (val) {
+      console.log(position);
+      input.value = val.substring(0, position - 1) + val.substring(position, val.length);
 
-          // if(backspace.createTextRange) {
-          //      let range = backspace.createTextRange();
-          //      range.move("character", position);
-          //      range.select();
-          // }
-     }
+      // if(backspace.createTextRange) {
+      //      let range = backspace.createTextRange();
+      //      range.move("character", position);
+      //      range.select();
+      // }
+   }
 }
