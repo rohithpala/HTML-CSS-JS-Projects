@@ -31,11 +31,11 @@ main {
   font-size: 60px;
 }
 
-#buttons {
+#buttons-container {
   margin-top: 20px;
 }
 
-button {
+.button {
   font-family: Georgia, "Times New Roman", Times, serif;
   background-color: transparent;
   border: 2px solid #1e1e1e;
@@ -45,11 +45,16 @@ button {
   cursor: pointer;
   font-weight: bold;
   font-size: 15px;
+  transition: 0.1s all ease;
 }
 
-button:hover {
+.button:hover {
   color: #fff;
   background-color: #069;
+}
+
+.pressed {
+  transform: scale(0.9);
 }
 
 #written-by-container {
