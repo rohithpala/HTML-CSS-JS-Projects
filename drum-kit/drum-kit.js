@@ -4,14 +4,14 @@ keys.forEach(key => key.addEventListener("transitionend", removeTransformPropert
 
 function playSound(e) {
    const keyPressed = e.keyCode;
-   const audio = document.getElementById("audio-" + keyPressed);
-   if (!audio) { // if key pressed is not available
-      return;
-   } else {
-      document.getElementById("key-" + keyPressed).classList.add("playing");
-      audio.currentTime = 0; // if audio is already playing, play it from start
-      audio.play();
-   }
+   const key = document.querySelector(`.key[data-key="${keyPressed}"]`);
+   const audio = document.querySelector(`audio[data-key="${keyPressed}"]`);
+
+   if (!audio) return; // if key pressed is not available
+
+   key.classList.add("playing");
+   audio.currentTime = 0; // if audio is already playing, play it from start
+   audio.play();
 }
 
 function removeTransformProperty(e) {
