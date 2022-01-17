@@ -6,11 +6,19 @@
   padding: 0;
 }
 
-body {
+body,
+#container {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+body {
   padding: 40px;
+}
+
+#container {
+  align-items: center;
 }
 
 .accordion {
@@ -33,13 +41,6 @@ body {
   transition: max-height 0.4s ease-out;
 }
 
-#container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
 #written-by-container {
   display: flex;
   flex-direction: column;
@@ -50,7 +51,7 @@ body {
   padding: 1rem;
   margin-top: 5px;
 }
-  
+
 #written-by-container a {
   color: #000;
 }
