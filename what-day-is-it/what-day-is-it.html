@@ -8,7 +8,7 @@
    <title>What day is it?</title>
 
    <link rel="stylesheet" href="what-day-is-it.css">
-   <script src="what-day-is-it.js"></script>
+   <script src="what-day-is-it.js" defer></script>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
          <!-- Date -->
          <div id="date-container">
             <label>Date:</label>
-            <select id="date-dd" onclick="checkMonthAndYear()">
+            <select id="date-dd" onclick="changeDatesBasedOnMonthAndYear()">
                <option value="select">Select Date</option>
                <option value="1">1</option>
                <option value="2">2</option>
