@@ -26,11 +26,11 @@ body {
   background-color: rgb(219, 219, 219);
   padding: 100px 20px;
   box-shadow: 0 15px 25px #000;
+  transition: 0.1s transform;
 }
 
 #card:hover {
   transform: scale(1.02);
-  transition: 0.3s all;
   cursor: pointer;
 }
 
