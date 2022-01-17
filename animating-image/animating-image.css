@@ -1,23 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body,
-main {
+body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-body {
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 img {
-  width: 220px;
-  height: 200px;
   animation: rotate linear 1.2s infinite;
 }
 
