@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  background-color: #1e1e1e;
+  padding: 15px;
+}
+
+#menu li a {
+  color: rgb(255, 196, 0);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px;
+  transition: 0.3s all;
+}
+
+#menu li a:hover {
+  color: #1e1e1e;
+  background-color: rgb(255, 196, 0);
+  box-shadow: 5px 10px 30px #777676;
+}
