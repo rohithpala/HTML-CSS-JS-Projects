@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+footer {
+  width: 100%;
+  color: rgb(255, 196, 0);
+  background-color: #1e1e1e;
+  font-weight: inherit;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid #fff;
+}
+
+#logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+.vertical-line {
+  background-color: #fff;
+  border: 1px solid #fff;
+  height: 90px;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer li {
+  display: inline;
+  padding: 0 5px;
+}
+
+footer a {
+  text-decoration: none;
+  color: rgb(255, 196, 0);
+}
+
+#links a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  color: rgb(255, 196, 0);
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+footer hr {
+  width: 100%;
+  background-color: #fff;
+}
+
+#links,
+#contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-icon {
+  margin-top: 2px;
+  font-size: 1.5em;
+}
+
+#instagram {
+  color: #ff002b;
+}
+
+#youtube {
+  color: #f00;
+}
+
+#github {
+  color: #fff;
+}
+
+#linkedin {
+  color: #0077b5;
+}
+
+#contact-us a {
+  margin: 0 5px;
+}
