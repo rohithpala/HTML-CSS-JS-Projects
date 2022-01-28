@@ -21,11 +21,21 @@ input.addEventListener("input", function () {
       if (alphabetMatch && digitsMatch && splCharactersMatch && password.length >= 8) {
          strength.innerText = "Password is Strong";
          input.style.borderColor = indicator.style.color = strength.style.color = "#0f0";
-         indicator_.classList.replace("fa-circle-exclamation", "fa-circle-check");
+         indicator_.classList.remove("fa-circle-exclamation");
+         indicator_.classList.remove("fa-circle-minus");
+         indicator_.classList.add("fa-circle-check");
+      } else if (alphabetMatch && digitsMatch && password.length >= 8) {
+         strength.innerText = "Password is Medium";
+         input.style.borderColor = indicator.style.color = strength.style.color = "#cc8500";
+         indicator_.classList.remove("fa-circle-exclamation");
+         indicator_.classList.remove("fa-circle-check");
+         indicator_.classList.add("fa-circle-minus");
       } else if (alphabetMatch || digitsMatch || splCharactersMatch) {
          strength.innerText = "Password is Weak";
          input.style.borderColor = indicator.style.color = strength.style.color = "#ff6333";
-         indicator_.classList.replace("fa-circle-check", "fa-circle-exclamation");
+         indicator_.classList.remove("fa-circle-check");
+         indicator_.classList.remove("fa-circle-minus");
+         indicator_.classList.add("fa-circle-exclamation");
       }
    }
 });
