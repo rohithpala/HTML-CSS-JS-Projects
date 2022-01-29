@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Colour Code Converter</title>
+
+   <link rel="stylesheet" href="color-code-converter.css">
+   <script src="color-code-converter.js" defer></script>
+</head>
+
+<body>
+   <main>
+      <h1>Color Code Converter</h1>
+
+      <div id="hex-container">
+         <label for="hex">Hex:</label>
+         <span id="hash">#</span>
+         <input type="text" id="hex" placeholder="Hex">
+      </div>
+
+      <table id="rgb">
+         <tr id="rgb-label-row">
+            <td> <label for="r">R:</label> </td>
+            <td> <label for="g">G:</label> </td>
+            <td> <label for="b">B:</label> </td>
+         </tr>
+
+         <tr id="rgb-input-row">
+            <td> <input type="number" id="r" placeholder="Red" min="0" max="255"> </td>
+            <td> <input type="number" id="g" placeholder="Green" min="0" max="255"> </td>
+            <td> <input type="number" id="b" placeholder="Blue" min="0" max="255"> </td>
+         </tr>
+      </table>
+
+      <table id="hsl">
+         <tr id="hsl-label-row">
+            <td> <label for="h">H:</label> </td>
+            <td> <label for="s">S:</label> </td>
+            <td> <label for="l">L:</label> </td>
+         </tr>
+
+         <tr id="hsl-input-row">
+            <td> <input type="number" id="h" placeholder="Hue" min="0" max="359"> <sup>°</sup> </td>
+            <td> <input type="number" id="s" placeholder="Saturation" min="0" max="100"> % </td>
+            <td> <input type="number" id="l" placeholder="Lightness" min="0" max="100"> % </td>
+         </tr>
+      </table>
+
+      <div id="color">Color Preview</div>
+   </main>
+
+   <div id="written-by-container">
+      <h3>Written by <a href="https://github.com/rohithpala" target="_blank">Rohith Pala</a> with &hearts;.</h3>
+      <h3>You can find the code of this project
+         <a href="https://github.com/rohithpala/HTML-CSS-JS-Projects/tree/main/color-code-converter(optimized-ui)"
+            target="_blank">here</a>
+      </h3>
+   </div>
+</body>
+
+</html>
