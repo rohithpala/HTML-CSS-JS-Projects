@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>HEX2HSL Converter</title>
+   <link rel="stylesheet" href="hex2hsl.css">
+   <script src="hex2hsl.js" defer></script>
+</head>
+
+<body>
+   <div id="main">
+      <h1>HEX to HSl Converter</h1>
+      <div id="hex-container">
+         <label for="hex">HEX:</label>
+         <div>
+            <input type="text" id="hash" value="#" readonly>
+            <input type="text" id="hex" value="ffffff">
+         </div>
+      </div>
+
+      <div id="btn-container">
+         <button id="convert-button">Convert to HSL</button>
+      </div>
+
+      <table id="hsl-container">
+         <tr>
+            <td>Hue (H):</td>
+            <td id="h">0 <sup>°</sup></td>
+         </tr>
+         <tr>
+            <td>Saturation (S):</td>
+            <td id="s">0 %</td>
+         </tr>
+         <tr>
+            <td>Lightness (L):</td>
+            <td id="l">100 %</td>
+         </tr>
+         <tr>
+            <td>HSL:</td>
+            <td id="hsl">hsl(0 <sup>°</sup> , 0.00 % , 100.00 %)</td>
+         </tr>
+      </table>
+
+      <div id="color-panel"></div>
+   </div>
+
+   <span id="back">Go back to <a href="../../color-code-converter.html"> Homepage </a></span>
+</body>
+
+</html>

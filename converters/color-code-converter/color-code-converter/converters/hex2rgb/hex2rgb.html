@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <title>HEX2RGB Converter</title>
+   <link rel="stylesheet" href="hex2rgb.css">
+   <script src="hex2rgb.js" defer></script>
+</head>
+
+<body>
+   <div id="main">
+      <h1>HEX to RGB Converter</h1>
+      <div id="hex-container">
+         <label for="hex">HEX:</label>
+         <div>
+            <input type="text" id="hash" value="#" readonly>
+            <input type="text" id="hex" value="ffffff">
+         </div>
+      </div>
+
+      <div id="btn-container">
+         <button id="convert-button">Convert to RGB</button>
+      </div>
+
+      <table id="rgb-container">
+         <tr>
+            <td>R:</td>
+            <td id="r">255</td>
+         </tr>
+         <tr>
+            <td>G:</td>
+            <td id="g">255</td>
+         </tr>
+         <tr>
+            <td>B:</td>
+            <td id="b">255</td>
+         </tr>
+         <tr>
+            <td>RGB:</td>
+            <td id="rgb">rgb(255, 255, 255)</td>
+         </tr>
+      </table>
+
+      <div id="color-panel"></div>
+   </div>
+
+   <span id="back">Go back to <a href="../../color-code-converter.html"> Homepage </a></span>
+</body>
+
+</html>
