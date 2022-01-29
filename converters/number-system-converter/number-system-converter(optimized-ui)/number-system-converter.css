@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+main,
+#conatiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-image: linear-gradient(
+    214deg,
+    #00dbde 14%,
+    #fc00ff 46%,
+    #00ffa5 86%
+  );
+  min-height: 100vh;
+}
+
+main {
+  flex-direction: column;
+  background-image: linear-gradient(
+    180deg,
+    #ffce00,
+    #f7a800,
+    rgb(110, 110, 110)
+  );
+  padding: 120px 100px;
+  border-radius: 10px;
+}
+
+input {
+  background-color: #fff;
+  min-width: 350px;
+  margin: 15px 5px;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  letter-spacing: 4px;
+  transition: 0.5s;
+}
+
+input:focus {
+  box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.5);
+}
+
+input::placeholder {
+  letter-spacing: normal;
+}
+
+#input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.error {
+  display: none;
+  color: #f00;
+  font-size: small;
+  margin: 0 0 10px 30px;
+  text-align: start;
+}
+
+#written-by-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 5px;
+}
+
+#written-by-container a {
+  color: #000;
+}
+
+/* Table CSS */
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px;
+  text-align: center;
+}
+
+#table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  min-width: 100%;
+  color: #fff;
+  background-color: transparent;
+  margin: 10px;
+  padding: 10px 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  transition: 0.3s transform;
+}
+
+.button:hover {
+  color: #000;
+  background-color: #fff;
+}
+
+.button:active {
+  transform: scale(0.9);
+}
+
+.conversion-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#bin-oct-container,
+#bin-hex-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+#bin-hex-container {
+  display: flex;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 10px;
+}
+
+th,
+td {
+  border: 1px solid #fff;
+  padding: 8px;
+  letter-spacing: 2px;
+}
