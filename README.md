@@ -1,7 +1,9 @@
 <html>
 This repository contains beginner, intermediate JS Projects.<br>
 Some are hosted on heroku platform<br>
-<u>Links of the hosted websites</u>:<br>
+
+### Links of the hosted websites
+
 <ol>
      <li><a href="https://age-calculator-by-rohith.herokuapp.com/age-calculator/age-calculator.html" traget="_blank">Age Calculator</a></li>
      <li><a href="https://background-colour-changer.herokuapp.com" traget="_blank">Background Color Changer</a></li>
