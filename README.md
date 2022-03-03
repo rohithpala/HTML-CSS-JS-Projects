@@ -2,6 +2,8 @@
 This repository contains beginner, intermediate JS Projects.<br>
 Some are hosted on heroku platform<br>
 
+Portfolio: <a href="https://portfolio-rohith.netlify.app">https://portfolio-rohith.netlify.app/</a>
+
 ### Links of the hosted websites
 
 <ol>
