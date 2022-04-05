@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Mouse Coordinates</title>
+
+   <link rel="stylesheet" href="mouse-coordinates.css">
+</head>
+
+<body>
+   <h2>Click to get the Locations</h2>
+   <div class="container">
+      <div id="x-container">X Coordinate: <span id="x">-</span></div>
+      <div id="y-container">Y Coordinate: <span id="y">-</span></div>
+   </div>
+
+   <script>
+      const x = document.getElementById("x");
+      const y = document.getElementById("y");
+
+      window.addEventListener("click", function (event) {
+         x.textContent = event.clientX;
+         y.textContent = event.clientY;
+      });
+   </script>
+</body>
+
+</html>
