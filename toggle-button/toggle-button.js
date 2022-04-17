@@ -1,14 +1,10 @@
-const circleStyle = document.getElementById("circle").style;
-const circleProp = window.getComputedStyle(circle);
+const toggleButton = document.getElementById("toggle");
+const toggleSlider = document.getElementById("toggle-slider");
+let left = 0;
 
-document.getElementById("container").addEventListener("click", function () {
-   if (circleProp.getPropertyValue("background-color") === "rgb(85, 85, 85)") {
-      circleStyle.backgroundColor = "rgb(255, 255, 255)";
-      circleStyle.right = "5px";
-      circleStyle.left = "unset";
-   } else if (circleProp.getPropertyValue("background-color") === "rgb(255, 255, 255)") {
-      circleStyle.backgroundColor = "rgb(85, 85, 85)";
-      circleStyle.left = "5px";
-      circleStyle.right = "unset";
-   }
+toggleButton.addEventListener("click", function () {
+   if (left === 0) left = 55;
+   else left = 0;
+
+   toggleSlider.style.left = left + "%";
 });
