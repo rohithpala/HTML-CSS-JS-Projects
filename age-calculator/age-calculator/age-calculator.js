@@ -50,14 +50,6 @@ function checkMonthAndYear() {
    }
 }
 
-function noOfLeapYears(yearOfBirth) {
-   const currentYear = new Date().getFullYear();
-   let i, leapYears = 0;
-   for (i = yearOfBirth; i < currentYear; i++)
-      if (i % 4 === 0) leapYears++;
-   return leapYears;
-}
-
 function checkFields() {
    if (document.getElementById("date-dd").value === "select" ||
       document.getElementById("month-dd").value === "select" ||
@@ -91,9 +83,6 @@ function calculateAge() {
          const months = parseInt(days / 30);
          days -= months * 30.4167;
 
-         days += noOfLeapYears(yearOfBirth);
-
-         console.log(1);
          const age = document.getElementById('age');
          age.style.display = "inherit";
          age.innerText = years + " years " + months + " months " + parseInt(days) + " days";

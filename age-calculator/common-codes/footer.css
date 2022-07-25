@@ -61,31 +61,16 @@ footer hr {
   align-items: center;
 }
 
-#instagram,
-#youtube,
+#globe,
 #github,
-#whatsapp,
-#phone,
 #email,
 #linkedin {
   margin-top: 2px;
   font-size: 1.5em;
 }
 
-#phone {
-  color: #4eeaff;
-}
-
-#instagram {
-  color: #ff002b;
-}
-
-#youtube {
-  color: #f00;
-}
-
-#whatsapp {
-  color: #25d366;
+#globe {
+  color: #bbbbbb;
 }
 
 #github {

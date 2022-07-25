@@ -35,18 +35,13 @@
 
       <!-- Date, Month, Year Fields -->
       <div id="dmy-container">
-         <!-- Date -->
-         <div id="date-container">
-            <label>Date:</label>
-            <select id="date-dd" onclick="checkMonthAndYear()">
-               <option value="select">Select Date</option>
-               <script>
-                  const date = document.getElementById("date-dd");
-                  for (i = 1; i <= 31; i++) {
-                     date.innerHTML += "<option value='" + i + "'>" + i + "</option>";
-                  }
-               </script>
-            </select>
+         <!-- Year -->
+         <div id="year-container">
+            <label>Year:</label>
+            <input id="year-ip" type="number" min="1" placeholder="Year" oninput="changeDate('year')">
+            <script>
+               document.getElementById("year-ip").setAttribute("max", new Date().getFullYear());
+            </script>
          </div>
 
          <!-- Month -->
@@ -69,13 +64,18 @@
             </select>
          </div>
 
-         <!-- Year -->
-         <div id="year-container">
-            <label>Year:</label>
-            <input id="year-ip" type="number" min="1" placeholder="Year" oninput="changeDate('year')">
-            <script>
-               document.getElementById("year-ip").setAttribute("max", new Date().getFullYear());
-            </script>
+         <!-- Date -->
+         <div id="date-container">
+            <label>Date:</label>
+            <select id="date-dd" onclick="checkMonthAndYear()">
+               <option value="select">Select Date</option>
+               <script>
+                  const date = document.getElementById("date-dd");
+                  for (i = 1; i <= 31; i++) {
+                     date.innerHTML += "<option value='" + i + "'>" + i + "</option>";
+                  }
+               </script>
+            </select>
          </div>
       </div>
 
