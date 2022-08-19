@@ -83,9 +83,7 @@ function calculateAge() {
          const months = parseInt(days / 30);
          days -= months * 30.4167;
 
-         const age = document.getElementById('age');
-         age.style.display = "inherit";
-         age.innerText = years + " years " + months + " months " + parseInt(days) + " days";
+         alert(years + " years " + months + " months " + parseInt(days) + " days");
       }
    }
 }

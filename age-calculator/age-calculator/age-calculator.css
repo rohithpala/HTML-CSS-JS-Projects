@@ -81,13 +81,8 @@
   cursor: pointer;
 }
 
-#age-container {
-  margin-top: 10px;
-}
-
-#age {
-  display: none;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: underline;
+@media (max-width: 700px) {
+  #main {
+    min-height: calc(100vh - 24px - 57.4px);
+  }
 }

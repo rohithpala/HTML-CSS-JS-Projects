@@ -12,7 +12,6 @@ document.getElementById("footer").innerHTML = `
          <ul>
             <li><a href="../about-us/about-us.html">About Us</a></li>
             <li><a href="../how-it-works/how-it-works.html">How it all Works?</a></li>
-            <li><a href="../feedback-form/feedback-form.html">Leave Us a Feedback</a></li>
          </ul>
       </div>
 
@@ -25,14 +24,8 @@ document.getElementById("footer").innerHTML = `
                <a href="https://all-websites-by-rohith.netlify.app/" target="_blank">
                   <i class="fa-solid fa-globe" id="globe"></i>
                </a>
-               <a href="mailto:programmerrohith@gmail.com">
-                  <i class="fas fa-envelope" id="email"></i>
-               </a>
                <a href="https://github.com/rohithpala" target="_blank">
                   <i class="fab fa-github" id="github"></i>
-               </a>
-               <a href="https://www.linkedin.com/in/rohithpala" target="_blank">
-                  <i class="fab fa-linkedin" id="linkedin"></i>
                </a>
          </div>
       </div>
