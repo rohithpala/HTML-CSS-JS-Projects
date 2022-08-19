@@ -89,7 +89,8 @@ main {
   }
 }
 
-@media (max-width: 400px) {.work {
+@media (max-width: 400px) {
+  .work {
     margin: 10px 0;
   }
 }
