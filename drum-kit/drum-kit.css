@@ -65,11 +65,22 @@ body {
   font-size: 2rem;
 }
 
-#record {
-  margin-right: 10px;
+#small-container {
+  color: #fff;
+  font-size: 25px;
+  margin: 0 7px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-input[type="checkbox"] {
-  width: 1.2rem;
-  height: 1.2rem;
+@media (max-width: 1500px) {
+  #main-container {
+    display: none;
+  }
+
+  #small-container {
+    display: inherit;
+  }
 }
