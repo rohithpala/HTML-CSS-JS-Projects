@@ -8,10 +8,12 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
 }
 
+.music-bar {
+  position: fixed;
+  width: 10px;
+  background-color: #000;
+  transition: height 2s ease-in-out;
+}
