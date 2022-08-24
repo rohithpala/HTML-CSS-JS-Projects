@@ -98,4 +98,4 @@ view.addEventListener("click", function () {
 });
 
 restart.addEventListener("click", setup);
-restartInRestartContainer.addEventListener("clcik", setup);
+restartInRestartContainer.addEventListener("click", setup);
