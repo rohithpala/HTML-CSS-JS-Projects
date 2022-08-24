@@ -1,65 +1,75 @@
-const itemInput = document.getElementById("item-input");
-const add = document.getElementById("add");
+const input = document.getElementById("input");
+const addButton = document.getElementById("add");
 const list = document.getElementById("list");
-const remove = document.getElementById("remove");
+const remainingTasks = document.getElementById("remaining-tasks");
+const markAsCompleted = document.getElementById("mark-as-completed");
+const clearAll = document.getElementById("clear-all");
+const editButtons = document.getElementsByClassName("edit");
+const deleteButtons = document.getElementsByClassName("delete");
 
-function addItem() {
-   const errorMsg = document.getElementById("error-message").style;
-   if (itemInput.value.trim() === "") {
-      errorMsg.display = "inherit";
+function addTask(task) {
+   list.innerHTML += `
+      <div>
+         <li>` + task + `</li>` +
+      `<i class="fas fa-edit edit"></i>` +
+      `<i class="fas fa-trash delete"></i>
+      </div>`
+      ;
+
+   remainingTasks.innerText = parseInt(remainingTasks.innerText) + 1;
+
+   input.value = "";
+   addButton.disabled = true;
+
+   if (remainingTasks.innerText !== "0") {
+      markAsCompleted.disabled = false;
+      clearAll.disabled = false;
+   }
+
+   editButtons[parseInt(remainingTasks.innerText) - 1].addEventListener("click", editTask);
+   deleteButtons[parseInt(remainingTasks.innerText) - 1].addEventListener("click", deleteTask);
+}
+
+let task;
+input.addEventListener("keyup", function (e) {
+   task = input.value.trim();
+   if (task === "") {
+      addButton.disabled = true;
    } else {
-      errorMsg.display = "none";
-      list.innerHTML += `
-               <div class="item-container">
-                    <input type="checkbox" class="cb td" oninput="setCompleted()">
-                    <span class="list-item td">` + itemInput.value + `</span>
-               </div>
-          `;
-      itemInput.value = "";
+      addButton.disabled = false;
+      if (e.key === "Enter")
+         addTask(task);
    }
+});
+
+addButton.addEventListener("click", () => addTask(input.value.trim()));
+
+remainingTasks.addEventListener("change", function () {
+   if (remainingTasks.innerText === "0") {
+      addButton.disabled = true;
+      markAsCompleted.disabled = true;
+      clearAll.disabled = true;
+   } else {
+      addButton.disabled = false;
+      markAsCompleted.disabled = false;
+      clearAll.disabled = false;
+   }
+});
+
+function editTask(e) {
+   console.log("edit");
+   console.log(e.target);
 }
 
-function removeItem() {
-   if (list.innerHTML != "") {
-      const containers = list.querySelectorAll(".item-container");
-      const itemCBs = list.querySelectorAll(".cb");
-      const len = itemCBs.length;
-      let i;
-      for (i = 0; i < len; i++)
-         if (itemCBs[i].checked)
-            containers[i].remove();
-   }
+function deleteTask(e) {
+   console.log("delete");
+   console.log(e.target.previousElementSibling.innerHTML);
 }
 
-function clearList() {
-   if (list.innerHTML != "")
-      list.innerHTML = "";
-}
+clearAll.addEventListener("click", function () {
+   list.innerText = "";
+   remainingTasks.innerText = "0";
 
-function addCompletedItem() {
-   if (list.innerHTML != "") {
-      const items = list.querySelectorAll(".list-item");
-      const itemCBs = list.querySelectorAll(".cb");
-      const len = items.length;
-      let i;
-      for (i = 0; i < len; i++) {
-         if (itemCBs[i].checked && items[i].style.textDecoration === "line-through") {
-            items[i].style.textDecoration = "inherit";
-            itemCBs[i].checked = false;
-         }
-      }
-   }
-}
-
-function markAsCompleted() {
-   if (list.innerHTML != "") {
-      const items = list.querySelectorAll(".list-item");
-      const itemCBs = list.querySelectorAll(".cb");
-      const len = items.length;
-      let i;
-      for (i = 0; i < len; i++) {
-         if (itemCBs[i].checked)
-            items[i].style.textDecoration = "line-through";
-      }
-   }
-}
+   markAsCompleted.disabled = true;
+   clearAll.disabled = true;
+});
