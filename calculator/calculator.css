@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #00AAFF, #00FF6C);
+  min-height: 100vh;
+}
+
+.calculator-grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-rows: minmax(120px, auto) repeat(5, 70px);
+  grid-template-columns: repeat(4, 85px);
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+}
+
+.output .current-operand {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.calculator-grid > button {
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 1px solid #fff;
+  font-size: 20px;
+  font-weight: 600;
+  outline: none;
+  cursor: pointer;
+}
+
+.calculator-grid > button:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.span-2 {
+  grid-column: span 2;
+}
