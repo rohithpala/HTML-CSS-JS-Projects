@@ -9,6 +9,7 @@ const confidence = document.getElementById("confidence");
 const modalStyle = document.getElementById("url-modal-container").style;
 const modalOpenButton = document.getElementById("open-button");
 const urlInput = document.getElementById("url");
+
 let transcript, confidencePercentage;
 let msg = new SpeechSynthesisUtterance(), url;
 
@@ -26,14 +27,17 @@ recognition.onerror = function (event) {
 
 recognition.onresult = function (event) {
    const current = event.resultIndex;
-   transcript = event.results[current][0].transcript;
-   if (transcript.toLowerCase() === "clear all") {
+   transcript = event.results[current][0].transcript.toLowerCase();
+   if (transcript === "clear all") {
       content.value = "";
       confidence.innerText = "";
-   } else if (transcript.toLowerCase() === "who are you") {
+   } else if (transcript === "who are you") {
       msg.text = "I am Rohith's Assistant";
       window.speechSynthesis.speak(msg);
-   } else if (/["open *"]/.test(transcript.toLowerCase())) {
+   } else if (transcript === "what can you do") {
+      msg.text = "I am your personal assistant. I was created by Rohith.";
+      window.speechSynthesis.speak(msg);
+   } else if (/["open *"]/.test(transcript)) {
       modalStyle.display = "flex";
    } else {
       confidencePercentage = event.results[current][0].confidence;
