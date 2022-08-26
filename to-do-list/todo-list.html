@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>TODO List</title>
+
+   <link rel="stylesheet" href="todo-list.css">
+   <script src="todo-list.js" defer></script>
+
+   <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <main>
+      <h1>TODO List</h1>
+      <h5>Click on the item to mark it as complete</h5>
+
+      <div id="container">
+         <form id="form">
+            <input type="text" id="todo-input" placeholder="Add a TODO">
+            <button id="add" type="submit">+</button>
+         </form>
+         <button id="clear-all"><i class="fa-solid fa-trash-can"></i></button>
+      </div>
+
+         <div id="modal-container">
+            <div id="clear-all-modal">
+               <button id="close-modal">X</button>
+               <h2>Clear All</h2>
+               Are you Sure to delete all the TODOs?
+               <div id="modal-buttons-container">
+                  <button id="yes">Yes</button>
+                  <button id="no">No</button>
+               </div>
+            </div>
+         </div>
+
+      <div id="list-container">
+         <ul id="list">
+            <p id="no-tasks">🎉 No tasks to do 🎉</p>
+         </ul>
+      </div>
+
+      <div id="remaining-tasks-container">
+         <span>You are still to complete <strong id="remaining-tasks">0</strong> tasks</span>
+      </div>
+   </main>
+</body>
+
+</html>
