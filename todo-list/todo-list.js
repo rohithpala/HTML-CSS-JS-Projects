@@ -28,7 +28,7 @@ function utilFunction() {
                <button class="${todo.id} delete" onclick="deleteTask(${todo.id})"><i class="fas fa-trash"></i></button>
             </div>`
       });
-      remainingTasks.textContent = todoList.length;
+      remainingTasks.textContent = todoList.filter(todo => !todo.completed).length;
       localStorage.setItem("todoList", JSON.stringify(todoList));
    }
 }
@@ -86,6 +86,7 @@ clearAll.addEventListener("click", () => toggleModal());
 function markAsCompleted(id) {
    const todoItem = document.getElementsByClassName(id)[1];
    const index = todoList.findIndex(todo => todo.id === id);
+
    // let index, spliced;
    if (todoItem.classList.contains("completed")) {
       // index = completed.findIndex(todo => todo.id === id);
@@ -93,15 +94,16 @@ function markAsCompleted(id) {
       // todoList[index].splice(spliced.index, 0, spliced.text);
       todoItem.classList.remove("completed");
       todoList[index].completed = false;
+      remainingTasks.textContent = parseInt(remainingTasks.textContent) + 1;
    } else {
       // index = todoList.findIndex(todo => todo.id === id);
       // spliced = todoList.splice(index, 1);
       // completed.push({ index, text: spliced.todo });
       todoItem.classList.add("completed");
       todoList[index].completed = true;
+      remainingTasks.textContent = parseInt(remainingTasks.textContent) - 1;
    }
 
-   remainingTasks.textContent = todoList.length;
    localStorage.setItem("todoList", JSON.stringify(todoList));
 }
 
