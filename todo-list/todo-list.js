@@ -101,6 +101,7 @@ function markAsCompleted(id) {
       todoList[index].completed = true;
    }
 
+   remainingTasks.textContent = todoList.length;
    localStorage.setItem("todoList", JSON.stringify(todoList));
 }
 
