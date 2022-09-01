@@ -118,10 +118,13 @@ function editTask(id) {
    const todoItemElement = document.getElementsByClassName(id)[1];
    const index = todoList.findIndex(todo => todo.id === id);
    const edited = prompt("Type your edited task", todoList[index].todo);
-   todoList[index].todo = edited;
-   todoItemElement.textContent = edited;
 
-   localStorage.setItem("todoList", JSON.stringify(todoList));
+   if (edited) {
+      todoList[index].todo = edited;
+      todoItemElement.textContent = edited;
+
+      localStorage.setItem("todoList", JSON.stringify(todoList));
+   }
 }
 
 // modal functions
