@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Moving the checkbox out of the page */
+input[type="checkbox"].toggle {
+  position: absolute;
+  left: -9000px;
+  top: -9000px;
+}
+
+input[type="checkbox"].toggle + label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+input[type="checkbox"].toggle + label::before {
+  content: "";
+  width: 90px;
+  height: 40px;
+  background-color: #ddd;
+  border-radius: 20px;
+}
+
+input[type="checkbox"].toggle + label::after {
+  position: absolute;
+  left: 5px;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #f00;
+  border-radius: 50%;
+  transition: left 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+input[type="checkbox"].toggle:checked + label::after {
+  left: calc(90px - 30px - 5px); /* 90px is the width of the label */
+                                 /* 30px is width of slider */
+                                 /* 5px is the left margin of the slider */
+  /* transform: translateX(50px); */ /* This does the same thing */
+  background-color: #0f0;
+}
