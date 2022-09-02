@@ -38,7 +38,7 @@ function generatePassword() {
    const includeDigits = document.getElementById("digits").checked;
    const includeSymbols = document.getElementById("symbols").checked;
 
-   // if no constaint is selected
+   // if no constraint is selected
    if (!includeUppercase && !includeLowercase && !includeDigits && !includeSymbols) {
       document.getElementById("password").innerText = "Your Password Comes Here";
       alert("Please check atleast one checkbox to generate a password");
