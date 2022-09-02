@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Quiz Completed</title>
+
+   <link rel="stylesheet" href="../app.css">
+   <link rel="stylesheet" href="end.css">
+
+   <script src="end.js" defer></script>
+</head>
+
+<body>
+   <div class="container">
+      <div id="end" class="flex-center flex-column">
+         <h1 id="finalScore">0</h1>
+         <form method="post">
+            <input type="text" name="username" id="username" placeholder="Username">
+            <button
+               type="submit"
+               class="btn"
+               id="saveScoreBtn"
+               disabled
+            >
+               Save
+            </button>
+         </form>
+         <a href="../game/game.html" class="btn">Play Again</a>
+         <a href="../index.html" class="btn">Go Home</a>
+      </div>
+   </div>
+</body>
+
+</html>
