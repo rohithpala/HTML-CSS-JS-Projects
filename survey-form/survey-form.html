@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Survey Form</title>
+   <link rel="stylesheet" href="survey-form.css">
+</head>
+
+<body>
+   <form>
+      <h1>Customer Survey Form</h1>
+      <div class="container col">
+         <p class="title">Customer Name</p>
+         <div class="container row">
+            <input type="text" name="firstName" class="name" placeholder="First Name">
+            <input type="text" name="lastName" class="name" placeholder="Last Name">
+         </div>
+      </div>
+
+      <div class="container col">
+         <p class="title">Address</p>
+         <div class="container col">
+            <input type="text" name="streedAddress1" class="address" placeholder="Street Address Line 1">
+            <input type="text" name="streedAddress2" class="address" placeholder="Street Address Line 2">
+         </div>
+         <div class="container row">
+            <input type="text" name="state" class="state" placeholder="State">
+            <input type="text" name="city" class="city" placeholder="City">
+         </div>
+         <div class="container row">
+            <input type="text" name="pincode" class="pincode" placeholder="Pincode">
+            <input type="text" name="country" class="country" placeholder="Country">
+         </div>
+      </div>
+
+      <div class="container col">
+         <p class="title">Contact No.</p>
+         <input type="text" name="contactNumber" class="contact-no" placeholder="XXXXXXXXXX">
+      </div>
+
+      <div class="container col">
+         <p class="title">Email Address</p>
+         <input type="text" name="emailAddress" class="email" placeholder="example@example.com">
+      </div>
+
+      <div class="container col">
+         <div class="container col">
+            <p class="title">How long have you been using this product and why?</p>
+            <textarea name="usingSince" class="using-since" cols="40" rows="8"></textarea>
+         </div>
+
+         <div class="container col">
+            <p class="title">Write your comments and suggestions about our products</p>
+            <textarea name="comments" class="comments" cols="40" rows="8"></textarea>
+         </div>
+
+         <div class="container col">
+            <p class="title">Any Changes or Improvements?</p>
+            <textarea name="changes" class="changes" cols="40" rows="8"></textarea>
+         </div>
+      </div>
+
+      <div class="btn-container">
+         <input type="submit" value="Submit">
+      </div>
+   </form>
+
+   <div id="written-by-container">
+      <h3>Written by <a href="https://github.com/rohithpala" target="_blank">Rohith Pala</a> with &hearts;.</h3>
+      <h3>You can find the code of this project
+         <a href="https://github.com/rohithpala/HTML-CSS-JS-Projects/tree/main/survey-form" target="_blank">here</a>
+      </h3>
+   </div>
+
+   <script>
+      document.querySelector("form").addEventListener("submit", (e) => {
+         e.preventDefault();
+         alert("Submitted");
+      });
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.container.col {
+  flex-direction: column;
+}
+
+form {
+  margin: 50px;
+  padding: 50px 100px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.title {
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: 230px;
+  height: 40px;
+  margin: 5px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus {
+  box-shadow: 0 0 5px #93b4fb;
+}
+
+input[type="submit"] {
+  color: #fff;
+  background-color: #18bd5b;
+  margin-top: 15px;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  resize: vertical;
+  overflow: auto;
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+textarea:hover,
+textarea:focus {
+  box-shadow: 0 0 5px #93b4fb;
+}
+
+#written-by-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 5px;
+}
+ 
+#written-by-container a {
+  color: #000;
+}
+
+@media (max-width: 760px) {
+  .container {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    margin: 0;
+  }
+
+  form {
+    width: 350px;
+    padding: 50px 10px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    margin-right: 20px;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  #written-by-container {
+    width: 350px;
+  }
+}
