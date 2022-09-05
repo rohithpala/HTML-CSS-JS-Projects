@@ -13,7 +13,7 @@ body {
   align-items: center;
   min-height: 100vh;
   color: #fff;
-  background-image: url("bg.jpg");
+  background-image: url("./bg.jpg");
 }
 
 #main {
@@ -92,10 +92,10 @@ body {
 .toggle-password,
 .toggle-re-password {
   position: absolute;
-  top: 55%;
   right: 10px;
   color: #000;
   margin-left: -25px;
+  transform: translateY(50%);
   cursor: pointer;
 }
 

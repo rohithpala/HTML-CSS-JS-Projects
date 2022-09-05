@@ -16,12 +16,11 @@
 <body>
    <div id="main">
       <div id="login-signup-links">
-         <span href="#" id="login-link" onclick="change('login')">Login</span>
-         <span href="#" id="signup-link" onclick="change('signup')">SignUp</span>
+         <span id="login-link" onclick="change('login')">Login</span>
+         <span id="signup-link" onclick="change('signup')">SignUp</span>
       </div>
 
-      <!-- <form id="form" action="https://www.github.com" method="post"> -->
-      <div id="form">
+      <form id="form">
          <div id="email-address-container">
             <label for="email-address">Email Address:</label>
             <input type="email" class="fields" id="email-address" placeholder="Email Address" />
@@ -37,10 +36,8 @@
             </div>
          </div>
 
-         <button id="button">Login</button>
-      </div>
-      <!-- <input type="submit" id="button" value="Login" /> -->
-      <!-- </form> -->
+         <button type="submit" id="button">Login</button>
+      </form>
    </div>
 </body>
 
