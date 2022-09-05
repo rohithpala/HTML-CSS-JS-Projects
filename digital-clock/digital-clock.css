@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  font-size: 10px;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("./bg.jpg") no-repeat center center/cover;
+}
+
+.clock {
+  color: #fff;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 10rem;
+}
+
+.clock>span {
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
+.clock>span:last-child {
+  margin-right: 0;
+  background-color: #327dffaa;
+}
+
+.hours,
+.minutes,
+.seconds {
+  width: 15rem;
+}
+
+#written-by-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 5rem;
+  font-size: 2rem;
+}
+ 
+#written-by-container a {
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .clock {
+    font-size: 5rem;
+  }
+
+  .clock>span {
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .hours,
+  .minutes,
+  .seconds {
+    width: 7.5rem;
+  }
+
+  #written-by-container {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .clock {
+    font-size: 4rem;
+  }
+  
+  .clock>span {
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .hours,
+  .minutes,
+  .seconds {
+    width: 5rem;
+  }
+}
