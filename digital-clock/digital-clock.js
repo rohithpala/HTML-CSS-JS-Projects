@@ -21,6 +21,8 @@ function setClock() {
             if (period.innerText === "A.M.")
                period.innerText = "P.M.";
          } else {
+            if (date.getHours() === 0)
+               hours.innerText = "12";
             hours.innerText = date.getHours().toString().padStart(2, "0");
             if (period.innerText === "P.M.")
                period.innerText = "A.M.";
