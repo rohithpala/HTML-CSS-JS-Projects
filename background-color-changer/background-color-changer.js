@@ -14,7 +14,7 @@ function rgb2hex(r, g, b) {
 }
 
 // default values of rgb and hex
-let rgb = "rgb(255, 255, 255)", hex = "#ffffff";
+let rgb = "RGB(255, 255, 255)", hex = "#FFFFFF";
 function setBackgroundColor() {
    // getting random values for r g b to use them as background color
    const redWeight = Math.floor(Math.random() * 254) + 1;
@@ -22,8 +22,8 @@ function setBackgroundColor() {
    const blueWeight = Math.floor(Math.random() * 254) + 1;
 
    // initializing the rgb and hex values
-   rgb = "rgb(" + redWeight + "," + greenWeight + "," + blueWeight + ")";
-   hex = rgb2hex(redWeight, greenWeight, blueWeight);
+   rgb = "RGB(" + redWeight + "," + greenWeight + "," + blueWeight + ")";
+   hex = rgb2hex(redWeight, greenWeight, blueWeight).toUpperCase();
 
    changeColors(isDark(hex), "sbg");
 
@@ -49,20 +49,32 @@ function changeColors(isBGDark, calledBy) {
    const a1 = writtenByContainerA[0], a2 = writtenByContainerA[1];
 
    if (isBGDark) { // changing color to white if background color is dark
-      h1.color = copy.color = reset.color = change.color = rgbLabel.color = hexLabel.color = writtenByContainer.color
+      h1.color = copy.color = rgbLabel.color = hexLabel.color = writtenByContainer.color
          = a1.style.color = a2.style.color = "#fff";
+
+      change.color = "#000";
+      change.backgroundColor = "#fff";
+
+      reset.color = "#000";
+      reset.backgroundColor = "#fff";
 
       h1.border = reset.border = change.border = writtenByContainer.border = "2px solid #fff";
    } else { // changing color to black if background color is not dark
-      h1.color = copy.color = reset.color = change.color = rgbLabel.color = hexLabel.color = writtenByContainer.color
+      h1.color = copy.color = rgbLabel.color = hexLabel.color = writtenByContainer.color
          = a1.style.color = a2.style.color = "#000";
+
+      change.color = "#fff";
+      change.backgroundColor = "#000";
+
+      reset.color = "#fff";
+      reset.backgroundColor = "#000";
 
       h1.border = reset.border = change.border = writtenByContainer.border = "2px solid #000";
 
       if (calledBy === "reset") {
          document.body.style.backgroundColor = "#fff";
          hex = "#ffffff";
-         rgb = "rgb(255, 255, 255)";
+         rgb = "RGB(255, 255, 255)";
          document.getElementById("hex").checked = true;
          document.getElementById("rgb").checked = false;
          changeColorCodeValues();
@@ -73,13 +85,14 @@ function changeColors(isBGDark, calledBy) {
 // function that changes color codes instantly when a radiobutton is clicked
 function changeColorCodeValues() {
    const colorName = document.getElementById("color");
-   if (document.getElementById("hex").checked) colorName.innerText = hex;
+   if (document.getElementById("hex").checked) colorName.innerText = hex.toString().toUpperCase();
    else if (document.getElementById("rgb").checked) colorName.innerText = rgb;
 }
 
 // function that copies the color code displayed on the screen to clipboard
 function copyToClipboard() {
-   navigator.clipboard.writeText(document.getElementById("color").innerText);
-   if (document.getElementById("hex").checked) alert("Copied the Hex Color Code to Clipboard");
-   else alert("Copied the RGB Color Code to Clipboard");
+   navigator.clipboard.writeText(document.getElementById("color").innerText).then(() => {
+      if (document.getElementById("hex").checked) alert("Copied the Hex Color Code to Clipboard");
+      else alert("Copied the RGB Color Code to Clipboard");
+   });
 }
