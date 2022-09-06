@@ -23,7 +23,7 @@
             <label for="hex">HEX:</label>
             <pre>  </pre>
             <input type="text" id="hash" value="#" readonly>
-            <input type="text" id="hex" placeholder="ffffff" value="ffffff"
+            <input type="text" id="hex" placeholder="FFFFFF" value="FFFFFF"
                oninput="syncRGBHexValues('hex', this.value)">
             <pre>  </pre>
             <i class="fa fa-copy" onclick="copyToClipboard('HEX')"></i>
@@ -46,19 +46,19 @@
 
          <div id="rgb-range-container">
             <div id="r-container">
-               <label for="r-range">r:</label>
+               <label for="r-range">R -</label>
                <pre>  </pre>
                <input type="range" class="rgb-range" id="r-range" value="255" min="0" max="255"
                   oninput="syncRGBHexValues('r', this.value)">
             </div>
             <div id="g-container">
-               <label for="g-range">g:</label>
+               <label for="g-range">G -</label>
                <pre>  </pre>
                <input type="range" class="rgb-range" id="g-range" value="255" min="0" max="255"
                   oninput="syncRGBHexValues('g', this.value)">
             </div>
             <div id="b-container">
-               <label for="b-range">b:</label>
+               <label for="b-range">B -</label>
                <pre>  </pre>
                <input type="range" class="rgb-range" id="b-range" value="255" min="0" max="255"
                   oninput="syncRGBHexValues('b', this.value)">

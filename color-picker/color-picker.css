@@ -4,6 +4,7 @@
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -28,6 +29,10 @@ main {
   color: #fff;
   background-color: #3e3e3e;
   padding: 3rem;
+}
+
+input {
+  text-align: center;
 }
 
 #heading {
@@ -59,7 +64,7 @@ main {
 
 #hash {
   outline: none;
-  max-width: 10px;
+  width: 15px;
 }
 
 #hex {
@@ -73,7 +78,7 @@ main {
 #r-number,
 #g-number,
 #b-number {
-  width: 2.5rem;
+  width: 3rem;
   outline: none;
 }
 
@@ -118,4 +123,21 @@ main {
 
 #written-by-container a {
   color: #fff;
+}
+
+@media (max-width: 540px) {
+  main {
+    padding: 1rem;
+  }
+
+  #written-by-container {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 460px) {
+  main {
+    width: 350px;
+    padding: 1rem;
+  }
 }

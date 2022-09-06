@@ -8,12 +8,12 @@ const hex = document.getElementById("hex");
 const colorPanel = document.getElementById("color");
 
 // syncs the number input and range input
-function syncRGBHexValues(color_name, value_) {
-   if (color_name !== "hex") {
-      document.getElementById(color_name + "-number").value =
-         document.getElementById(color_name + "-range").value = value_;
+function syncRGBHexValues(colorName, value_) {
+   if (colorName !== "hex") {
+      document.getElementById(colorName + "-number").value =
+         document.getElementById(colorName + "-range").value = value_;
 
-      setColor(color_name);
+      setColor(colorName);
    } else {
       if (hex.value.length === 0) {
          colorPanel.style.backgroundColor = "#ffffff";
@@ -24,7 +24,7 @@ function syncRGBHexValues(color_name, value_) {
          rRange.value = gRange.value = bRange.value = 255;
          rNumber.value = gNumber.value = bNumber.value = 255;
       } else if (hex.value.length === 6) {
-         setColor(color_name);
+         setColor(colorName);
       }
    }
 }
@@ -32,7 +32,7 @@ function syncRGBHexValues(color_name, value_) {
 // converts rgb values to hex values
 function rgb2hex(r, g, b) {
    const rgb = (r << 16) | (g << 8) | b;
-   return rgb.toString(16).padStart(6, 0);
+   return rgb.toString(16).padStart(6, 0).toUpperCase();
 }
 
 // converts hex values to rgb values
@@ -42,8 +42,8 @@ function hex2rgb(hex) {
 }
 
 // sets color to color holder and to ranges
-function setColor(color_name) {
-   if (color_name !== "hex") {
+function setColor(colorName) {
+   if (colorName !== "hex") {
       hex.value = rgb2hex(rRange.value, gRange.value, bRange.value);
    } else {
       const rgb = hex2rgb(hex.value);
