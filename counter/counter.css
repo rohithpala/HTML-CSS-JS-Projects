@@ -1,6 +1,8 @@
 * {
+  font-family: Georgia, "Times New Roman", Times, serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -17,26 +19,27 @@ main {
   justify-content: center;
   align-items: center;
   background-color: #bebebe;
+  margin-bottom: 10px;
   padding: 6rem 5rem;
 }
 
 #heading {
-  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 75px;
 }
 
 #counter {
-  font-family: "Times New Roman", Times, serif;
   margin-top: 10px;
   font-size: 60px;
 }
 
 #buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
 }
 
 .button {
-  font-family: Georgia, "Times New Roman", Times, serif;
   background-color: transparent;
   border: 2px solid #1e1e1e;
   border-radius: 10px;
@@ -102,4 +105,28 @@ td {
 
 #written-by-container a {
   color: #000;
+}
+
+@media (max-width: 520px) {
+  main {
+    padding: 6rem 2rem;
+  }
+
+  #written-by-container {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 430px) {
+  main {
+    padding: 6rem 0.5rem;
+  }
+
+  #buttons-container {
+    flex-direction: column;
+  }
+
+  .button {
+    margin-top: 10px;
+  }
 }
