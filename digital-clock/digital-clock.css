@@ -21,6 +21,7 @@ body {
 }
 
 .clock {
+  width: 72rem;
   color: #fff;
   background-color: #000;
   display: flex;
@@ -31,19 +32,32 @@ body {
 }
 
 .clock>span {
-  margin: 0 1rem;
-  padding: 1rem;
+  text-align: center;
 }
 
 .clock>span:last-child {
-  margin-right: 0;
   background-color: #327dffaa;
+}
+
+.clock-24>span:last-child {
+  background-color: #000;
+}
+
+.clock-24 {
+  margin-top: 1rem;
 }
 
 .hours,
 .minutes,
-.seconds {
+.seconds,
+.hours-24,
+.minutes-24,
+.seconds-24 {
   width: 15rem;
+}
+
+.period {
+  padding: 1rem;
 }
 
 #written-by-container {
@@ -64,6 +78,7 @@ body {
 
 @media (max-width: 900px) {
   .clock {
+    width: 42rem;
     font-size: 5rem;
   }
 
@@ -85,6 +100,7 @@ body {
 
 @media (max-width: 470px) {
   .clock {
+    width: 32rem;
     font-size: 4rem;
   }
   
