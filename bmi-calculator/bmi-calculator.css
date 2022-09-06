@@ -75,3 +75,14 @@ input {
 #written-by-container a {
   color: #000;
 }
+
+
+@media (max-width: 500px) {
+  main {
+    padding: 100px 50px;
+  }
+
+  #written-by-container {
+    font-size: 12px;
+  }
+}

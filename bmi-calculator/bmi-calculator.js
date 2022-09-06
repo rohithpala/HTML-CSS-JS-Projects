@@ -17,10 +17,10 @@ document.getElementById("calculate-button").addEventListener("click", function (
       bmiElement.innerHTML = "Your BMI is <strong>" + bmi + "</strong>";
 
       type.style.visibility = "visible";
-      if (bmi < 18.5) type.innerHTML = "<strong>Underweight</strong>";
-      else if (bmi >= 18.5 && bmi < 24.9) type.innerHTML = "<strong>Normal</strong>";
-      else if (bmi >= 24.9 && bmi < 29.9) type.innerHTML = "<strong>Overweight</strong>";
-      else if (bmi >= 29.9 && bmi < 34.9) type.innerHTML = "<strong>Obese</strong>";
-      else type.innerHTML = "<strong>Extremely Obese</strong>";
+      if (bmi < 18.5) type.innerHTML = "Underweight";
+      else if (bmi >= 18.5 && bmi < 24.9) type.innerHTML = "Normal";
+      else if (bmi >= 24.9 && bmi < 29.9) type.innerHTML = "Overweight";
+      else if (bmi >= 29.9 && bmi < 34.9) type.innerHTML = "Obese";
+      else type.innerHTML = "Extremely Obese";
    }
 });
