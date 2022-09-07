@@ -87,9 +87,16 @@ main {
   justify-content: center;
   align-items: center;
   width: 100%;
-  margin-top: 10px;
-  padding: 5px;
+  margin-top: 20px;
+  padding: 10px;
   background-color: #4e4e4e;
+}
+
+#alert-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
 
 #alert-container p {
@@ -106,6 +113,7 @@ main {
 
 .fa-play {
   color: #fff;
+  margin-left: 10px;
   cursor: pointer;
 }
 
@@ -118,9 +126,19 @@ main {
   border: 2px solid #fff;
   border-radius: 10px;
   padding: 1rem;
-  margin-top: 5px;
+  margin-top: 20px;
 }
   
 #written-by-container a {
   color: #fff;
+}
+
+@media (max-width: 450px) {
+  main {
+    padding: 3rem 1rem;
+  }
+
+  #written-by-container {
+    font-size: 12px;
+  }
 }

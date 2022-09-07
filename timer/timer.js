@@ -1,5 +1,13 @@
+const hr = document.getElementById("hours");
+const min = document.getElementById("minutes");
+const sec = document.getElementById("seconds");
+const startElement = document.getElementById("start");
+const alertAudioSelect = document.getElementById("alert-audio-select");
+const audio = document.getElementById("audio");
+
 let timerVar;
 
+// Checking for range if any input value is changed
 function inputChanged(id) {
    const element = document.getElementById(id);
    const max = parseInt(element.max);
@@ -13,14 +21,11 @@ function inputChanged(id) {
 }
 
 function timer() {
-   const hr = document.getElementById("hours");
-   const min = document.getElementById("minutes");
-   const sec = document.getElementById("seconds");
    if (hr.value === "0" && min.value === "0" && sec.value === "0") {
       stopTimer();
-      document.getElementById("start").innerText = "Start";
-      hr.readOnly = min.readOnly = sec.readOnly = false;
       document.getElementById("audio").play();
+      startElement.innerText = "Start";
+      hr.readOnly = min.readOnly = sec.readOnly = false;
    } else {
       if (sec.value === "0") {
          if (min.value === "0") {
@@ -37,10 +42,6 @@ function timer() {
 }
 
 function startTimer(button) {
-   const hr = document.getElementById("hours");
-   const min = document.getElementById("minutes");
-   const sec = document.getElementById("seconds");
-
    if (hr.value === "" || min.value === "" || sec.value === "" || (hr.value === "0" && min.value === "0" && sec.value === "0")) {
       alert("Set the timer before starting it");
    } else {
@@ -64,32 +65,26 @@ function startTimer(button) {
    }
 }
 
-function stopTimer() {
-   clearInterval(timerVar);
-}
-
-function reset() {
-   const hr = document.getElementById("hours");
-   const min = document.getElementById("minutes");
-   const sec = document.getElementById("seconds");
-
-   stopTimer();
-   hr.readOnly = min.readOnly = sec.readOnly = false;
-   hr.value = min.value = sec.value = "0";
-
-   document.getElementById("start").innerText = "Start";
-
-   document.getElementById("alert-audio-select").value = "1";
-   document.getElementById("audio").src = "timer-completed-alerts/timer1.mp3";
-}
-
 function setAudio() {
-   const audio = document.getElementById("audio");
-   audio.src = "timer-completed-alerts/timer" +
-      document.getElementById("alert-audio-select").value + ".mp3";
+   audio.src = "timer-completed-alerts/timer" + alertAudioSelect.value + ".mp3";
 }
 
 function playAudio() {
    setAudio();
    audio.play();
+}
+
+function stopTimer() {
+   clearInterval(timerVar);
+}
+
+function reset() {
+   stopTimer();
+   hr.readOnly = min.readOnly = sec.readOnly = false;
+   hr.value = min.value = sec.value = "0";
+
+   startElement.innerText = "Start";
+
+   alertAudioSelect.value = "1";
+   audio.src = "timer-completed-alerts/timer1.mp3";
 }
