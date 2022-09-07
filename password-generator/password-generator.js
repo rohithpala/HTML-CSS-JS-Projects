@@ -1,6 +1,7 @@
 // Syncing the Range input and Number input
 const passwordLengthRange = document.getElementById("password-length-range");
 const passwordLengthNumber = document.getElementById("password-length-number");
+
 passwordLengthRange.addEventListener("input", syncPasswordLength);
 passwordLengthNumber.addEventListener("input", syncPasswordLength);
 function syncPasswordLength(e) {
