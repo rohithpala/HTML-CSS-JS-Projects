@@ -113,3 +113,24 @@ main {
 #written-by-container a {
   color: #fff;
 }
+
+@media (max-width: 500px) {
+  main {
+    padding: 1rem 0;
+  }
+
+  #text {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  #result {
+    font-size: 13.7px;
+    padding: 5px;
+  }
+
+  #written-by-container {
+    font-size: 13px;
+  }
+}
