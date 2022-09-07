@@ -2,47 +2,54 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Guess the Number</title>
 
 	<link rel="stylesheet" href="guess-the-number.css">
-	<script src="guess-the-number.js"></script>
+	<script src="guess-the-number.js" defer></script>
 
 	<script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 	<main>
-		<h1>Guess the Number Game</h1>
+		<h1 id="title">Guess the Number Game</h1>
 
+		<!-- Input container -->
 		<div id="choice-container">
-			<div id="minimum-container">
-				<label for="minimum" id="minimuml">Minimum:</label>
-				<input type="number" id="minimum" placeholder="Minimum Value">
-			</div>
+			<table id="input-container">
+				<tbody>
+					<tr>
+						<td>Minimum:</td>
+						<td><input type="number" id="minimum" placeholder="Minimum"></td>
+					</tr>
 
-			<div id="maximum-container">
-				<label for="maximum" id="maximuml">Maximum:</label>
-				<input type="number" id="maximum" placeholder="Maximum Value">
-			</div>
+					<tr>
+						<td>Maximum:</td>
+						<td><input type="number" id="maximum" placeholder="Maximum"></td>
+					</tr>
+				</tbody>
+			</table>
 
 			<button class="button" id="next" onclick="startGame()">Next</button>
 		</div>
 
+		<!-- "Guessed Number" text container -->
 		<div id="guessed-number-container">
 			<h1 id="thought-of-text">I thought of a number...</h1>
 			<h1 id="your-turn-text">Now it's your turn to guess that number</h1>
 			<button class="button" id="go" onclick="showUserContainer()">Go On</button>
 		</div>
 
+		<!-- User Guessing Container -->
 		<div id="user-container">
 			<h1>Guess the Number</h1>
 			<h4><u>You have <span id="chances">10</span> chances. If you guess it correct, you win else you lose</u>
 			</h4>
 			<h5>You are left with <span id="chances-left"></span> chances</h5>
-			<input type="number" placeholder="Enter your Guess here" id="user-number-input">
+			<input type="number" placeholder="Enter your Guess" id="user-number-input">
 			<button type="submit" class="button" id="submit-button" onclick="checkTheGuess()">Is this
 				Correct?</button>
 			<p id="previous-guesses-para">Previous Guesses: <span id="previous-guesses"></span></p>
