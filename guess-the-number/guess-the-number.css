@@ -126,8 +126,8 @@ input {
 }
 
 #hint {
-  padding: 5px 10px;
   margin-top: 10px;
+  padding: 5px 10px;
 }
 
 #start-over {
@@ -185,6 +185,11 @@ input {
   #guessed-number-container,
   #user-container {
     width: 320px;
+  }
+
+  #hint {
+    padding: 0;
+    font-size: 12.7px;
   }
 
   #written-by-container {

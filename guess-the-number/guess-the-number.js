@@ -75,9 +75,9 @@ function checkTheGuess() {
       hint.style.display = "inherit";
 
       if (guessedNumber < number) {
-         hint.innerHTML = `Your Guess is <pre style="color: #f00"> LESS </pre> than the Number`;
+         hint.innerHTML = `Your Guess is LESS than the Number`;
       } else if (guessedNumber > number) {
-         hint.innerHTML = `Your Guess is <pre style="color: #f00"> GREATER </pre> than the Number`;
+         hint.innerHTML = `Your Guess is GREATER than the Number`;
       } else {
          hint.innerText = "Hurray! You GUESSED it";
          hint.style.backgroundColor = "#0f0";
