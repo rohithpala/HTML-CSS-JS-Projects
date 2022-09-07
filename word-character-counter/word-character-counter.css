@@ -86,3 +86,29 @@ main {
 #written-by-container a {
   color: #fff;
 }
+
+@media (max-width: 640px) {
+  main {
+    padding: 2rem 1rem;
+  }
+
+  #text {
+    width: 400px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 470px) {
+  main h1:first-child {
+    font-size: 20px;
+  }
+
+  #text {
+    width: 300px;
+    height: 150px;
+  }
+
+  #written-by-container {
+    font-size: 12px;
+  }
+}
