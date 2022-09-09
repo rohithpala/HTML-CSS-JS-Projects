@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border: 2px solid #34124B;
+}
+
+.stopwatch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  margin: 30px 0;
+}
+
+.stopwatch > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  color: #fff;
+  background-color: #6C63FF;
+  font-size: 35px;
+  margin: 0 10px;
+  padding: 10px 0;
+}
+
+.stopwatch > div > span:first-child {
+  border-bottom: 2px solid #fff;
+}
+
+.buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.buttons-container button {
+  color: #fff;
+  background-color: #e23329;
+  border: none;
+  padding: 7px 30px;
+  cursor: pointer;
+  transition: scale 0.05s ease-in-out;
+}
+
+.buttons-container button:active {
+  scale: 0.95;
+}
+
+.reset {
+  pointer-events: auto;
+}
+
+.reset:disabled {
+  background-color: #a41d16;
+  pointer-events: none;
+}
+
+#written-by-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 30px;
+}
+ 
+#written-by-container a {
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 15px 0;
+  }
+
+  .stopwatch > div {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stopwatch > div {
+    width: 100px;
+    height: 100px;
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .stopwatch > div {
+    width: 80px;
+    height: 80px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 435px) {
+  .stopwatch > div {
+    width: 50px;
+    height: 50px;
+    font-size: 15px;
+  }
+
+  #written-by-container {
+    font-size: 10px;
+  }
+}
