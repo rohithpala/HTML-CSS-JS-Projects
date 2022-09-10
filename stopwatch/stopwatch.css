@@ -17,11 +17,15 @@ body {
 
 .container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stopwatch-container {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 30px;
-  border: 2px solid #34124B;
 }
 
 .stopwatch {
@@ -32,7 +36,7 @@ body {
   margin: 30px 0;
 }
 
-.stopwatch > div {
+.stopwatch>div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,7 +50,7 @@ body {
   padding: 10px 0;
 }
 
-.stopwatch > div > span:first-child {
+.stopwatch>div>span:first-child {
   border-bottom: 2px solid #fff;
 }
 
@@ -63,7 +67,11 @@ body {
   border: none;
   padding: 7px 30px;
   cursor: pointer;
-  transition: scale 0.05s ease-in-out;
+  transition: all 0.05s ease-in-out;
+}
+
+.buttons-container button:hover {
+  background-color: #f53b31;
 }
 
 .buttons-container button:active {
@@ -71,12 +79,32 @@ body {
 }
 
 .reset {
-  pointer-events: auto;
+  display: none;
 }
 
-.reset:disabled {
-  background-color: #a41d16;
-  pointer-events: none;
+.reset.lap {
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+  transition: 0.1s ease-in-out;
+}
+
+.reset.lap:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+.lap-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.laps {
+  border-spacing: 50px 0;
+  margin-top: 20px;
 }
 
 #written-by-container {
@@ -89,7 +117,7 @@ body {
   padding: 1rem;
   margin-top: 30px;
 }
- 
+
 #written-by-container a {
   color: #000;
 }
@@ -99,14 +127,14 @@ body {
     padding: 15px 0;
   }
 
-  .stopwatch > div {
+  .stopwatch>div {
     width: 120px;
     height: 120px;
   }
 }
 
 @media (max-width: 600px) {
-  .stopwatch > div {
+  .stopwatch>div {
     width: 100px;
     height: 100px;
     font-size: 25px;
@@ -114,7 +142,7 @@ body {
 }
 
 @media (max-width: 500px) {
-  .stopwatch > div {
+  .stopwatch>div {
     width: 80px;
     height: 80px;
     font-size: 20px;
@@ -122,7 +150,7 @@ body {
 }
 
 @media (max-width: 435px) {
-  .stopwatch > div {
+  .stopwatch>div {
     width: 50px;
     height: 50px;
     font-size: 15px;

@@ -13,33 +13,48 @@
 
 <body>
    <div class="container">
-      <h1 class="title">Stopwatch</h1>
-
-      <div class="stopwatch">
-         <div>
-            <span>Hr</span>
-            <span class="hours">00</span>
+      <div class="stopwatch-container">
+         <h1 class="title">Stopwatch</h1>
+         <div class="stopwatch">
+            <div>
+               <span>Hr</span>
+               <span class="hours">00</span>
+            </div>
+            <span>:</span>
+            <div>
+               <span>Min</span>
+               <span class="minutes">00</span>
+            </div>
+            <span>:</span>
+            <div>
+               <span>Sec</span>
+               <span class="seconds">00</span>
+            </div>
+            <span>:</span>
+            <div>
+               <span>MS</span>
+               <span class="milliseconds">00</span>
+            </div>
          </div>
-         <span>:</span>
-         <div>
-            <span>Min</span>
-            <span class="minutes">00</span>
-         </div>
-         <span>:</span>
-         <div>
-            <span>Sec</span>
-            <span class="seconds">00</span>
-         </div>
-         <span>:</span>
-         <div>
-            <span>MS</span>
-            <span class="milliseconds">00</span>
+         <div class="buttons-container">
+            <button class="start">Start</button>
+            <button class="reset">Reset</button>
          </div>
       </div>
 
-      <div class="buttons-container">
-         <button class="start">Start</button>
-         <button class="reset">Reset</button>
+      <div class="lap-container">
+         <h1>Laps</h1>
+         <table class="laps">
+            <thead>
+               <tr>
+                  <th>Lap</th>
+                  <th>Time</th>
+                  <th>Difference</th>
+               </tr>
+            </thead>
+            <tbody>
+            </tbody>
+         </table>
       </div>
    </div>
 
