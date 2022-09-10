@@ -67,3 +67,13 @@ main {
 #written-by-container a {
   color: #fff;
 }
+
+@media (max-width: 440px) {
+  main {
+    padding: 10px;
+  }
+
+  #written-by-container {
+    font-size: 12px;
+  }
+}
