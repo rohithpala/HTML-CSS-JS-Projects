@@ -1,10 +1,13 @@
 const hex = document.getElementById("hex");
+
 const r = document.getElementById("r");
 const g = document.getElementById("g");
 const b = document.getElementById("b");
+
 const h = document.getElementById("h");
 const s = document.getElementById("s");
 const l = document.getElementById("l");
+
 const color = document.getElementById("color").style;
 
 hex.addEventListener("input", handleHEX);
@@ -103,15 +106,15 @@ function handleHEX() {
    if (hexValue.length === 6 && /^[0-9a-fA-F]*$/.test(hexValue)) {
       // HEX to RGB
       rgb = hex2rgb(hexValue)
-      r.value = rgb.r.toFixed(5);
-      g.value = rgb.g.toFixed(5);
-      b.value = rgb.b.toFixed(5);
+      r.value = parseInt(rgb.r);
+      g.value = parseInt(rgb.g);
+      b.value = parseInt(rgb.b);
 
       // HEX to HSL
       hsl = rgb2hsl(rgb.r, rgb.g, rgb.b);
-      h.value = hsl.h.toFixed(5);
-      s.value = hsl.s.toFixed(5);
-      l.value = hsl.l.toFixed(5);
+      h.value = hsl.h.toFixed(2);
+      s.value = hsl.s.toFixed(2);
+      l.value = hsl.l.toFixed(2);
 
       color.backgroundColor = "#" + hex.value;
    } else {
@@ -132,9 +135,9 @@ function handleRGB() {
 
       // RGB to HSL
       hsl = rgb2hsl(rValue, gValue, bValue);
-      h.value = hsl.h.toFixed(5);
-      s.value = hsl.s.toFixed(5);
-      l.value = hsl.l.toFixed(5);
+      h.value = hsl.h.toFixed(2);
+      s.value = hsl.s.toFixed(2);
+      l.value = hsl.l.toFixed(2);
 
       color.backgroundColor = "#" + hex.value;
    } else {
@@ -145,12 +148,12 @@ function handleRGB() {
 
 function handleHSL(e) {
    if (h.value !== "" && s.value !== "" && l.value !== "" &&
-      hValue >= 0 && hValue <= 359 && sValue >= 0 && sValue <= 100 && lValue >= 0 && lValue <= 100) {
+      h.value >= 0 && h.value <= 359 && s.value >= 0 && s.value <= 100 && l.value >= 0 && l.value <= 100) {
       // HSL to RGB
       rgb = hsl2rgb(h.value, s.value, l.value);
-      r.value = rgb.r.toFixed(5);
-      g.value = rgb.g.toFixed(5);
-      b.value = rgb.b.toFixed(5);
+      r.value = parseInt(rgb.r);
+      g.value = parseInt(rgb.g);
+      b.value = parseInt(rgb.b);
 
       // RGB to HEX
       hex.value = rgb2hex(rgb.r, rgb.g, rgb.b).toUpperCase();
@@ -159,5 +162,26 @@ function handleHSL(e) {
    } else {
       color.backgroundColor = "transparent";
       hex.value = r.value = g.value = b.value = "";
+   }
+}
+
+// Copy to clipboard
+function copyToClipboard(calledBy) {
+   if (calledBy === "hex") {
+      if (hex.value === "" || hex.value.length !== 6) return;
+      navigator.clipboard.writeText(`#${hex.value}`);
+      alert("Copied Hex Value to Clipboard");
+   } else if (calledBy === "rgb") {
+      if (r.value === "" || g.value === "" || b.value === "") return;
+      if (r.value >= 0 && r.value <= 255 && g.value >= 0 && g.value <= 255 && b.value >= 0 && b.value <= 255) {
+         navigator.clipboard.writeText(`rgb(${r.value}, ${g.value}, ${b.value})`);
+         alert("Copied RGB Value to Clipboard");
+      }
+   } else if (calledBy === "hsl") {
+      if (h.value === "" || s.value === "" || l.value === "") return;
+      if (h.value >= 0 && h.value <= 359 && s.value >= 0 && s.value <= 100 && l.value >= 0 && l.value <= 100) {
+         navigator.clipboard.writeText(`hsl(${h.value}, ${s.value}%, ${l.value}%)`);
+         alert("Copied HSL Value to Clipboard");
+      }
    }
 }

@@ -16,30 +16,27 @@ main {
 
 body {
   min-height: 100vh;
-  background-image: linear-gradient(
-    214deg,
-    #00dbde 14%,
-    #fc00ff 46%,
-    #00ffa5 86%
-  );
+  background-color: #111;
 }
 
 main {
-  background-image: linear-gradient(180deg, #ffce00, #f7a800, #585858);
-  padding: 75px;
-  border-radius: 10px;
+  color: #fff;
+  background-color: #333;
+  padding: 50px;
+}
+
+main h1 {
+  margin-bottom: 10px;
 }
 
 input {
-  background-color: #fff;
   min-width: 100px;
   margin: 15px 5px;
   padding: 10px;
   border: none;
-  border-radius: 8px;
-  text-align: center;
   outline: none;
-  transition: 0.5s;
+  text-align: center;
+  transition: box-shadow 0.15s ease-in-out;
   letter-spacing: 1px;
 }
 
@@ -47,11 +44,19 @@ input:focus {
   box-shadow: 0px 6px 10px 1px rgba(0, 0, 0, 0.5);
 }
 
+#hex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #hash {
+  color: #000;
   background-color: #fff;
+  margin-left: 10px;
   margin-right: -5px;
-  padding: 5px;
-  border-radius: 6px;
+  padding: 8px 5px;
+  border-right: 2px solid #000;
 }
 
 table {
@@ -80,17 +85,71 @@ td {
   border: 1px solid #fff;
 }
 
+.copy {
+  font-size: 20px;
+  cursor: pointer;
+}
+
 #written-by-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 2px solid #000;
+  color: #ccc;
+  border: 2px solid #ccc;
   border-radius: 10px;
   padding: 1rem;
   margin-top: 5px;
 }
 
 #written-by-container a {
-  color: #000;
+  color: #ccc;
+}
+
+@media (max-width: 685px) {
+  main {
+    padding: 25px;
+  }
+
+  input {
+    min-width: 50px;
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    padding: 25px 10px;
+  }
+
+  table {
+    margin: 10px 0;
+  }
+
+  th,td {
+    padding: 5px 0;
+  }
+
+  input {
+    margin: 5px;
+    padding: 5px;
+    min-width: 30px;
+  }
+
+  #hash {
+    padding: 3px 5px;
+  }
+
+  #written-by-container {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  main {
+    width: 340px;
+  }
+
+  main h1 {
+    font-size: 30px;
+  }
 }

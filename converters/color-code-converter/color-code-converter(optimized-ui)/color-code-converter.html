@@ -9,6 +9,8 @@
 
    <link rel="stylesheet" href="color-code-converter.css">
    <script src="color-code-converter.js" defer></script>
+
+   <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -19,33 +21,36 @@
          <label for="hex">Hex:</label>
          <span id="hash">#</span>
          <input type="text" id="hex" placeholder="Hex">
+         <i class="fa-solid fa-copy copy" onclick="copyToClipboard('hex')" style="margin-left: 10px;"></i>
       </div>
 
       <table id="rgb">
          <tr id="rgb-label-row">
-            <td> <label for="r">R:</label> </td>
-            <td> <label for="g">G:</label> </td>
-            <td> <label for="b">B:</label> </td>
+            <td> <label for="r">Red</label></td>
+            <td> <label for="g">Green</label></td>
+            <td> <label for="b">Blue</label></td>
          </tr>
 
          <tr id="rgb-input-row">
             <td> <input type="number" id="r" placeholder="Red" min="0" max="255"> </td>
             <td> <input type="number" id="g" placeholder="Green" min="0" max="255"> </td>
             <td> <input type="number" id="b" placeholder="Blue" min="0" max="255"> </td>
+            <td><i class="fa-solid fa-copy copy" onclick="copyToClipboard('rgb')"></i></td>
          </tr>
       </table>
 
       <table id="hsl">
          <tr id="hsl-label-row">
-            <td> <label for="h">H:</label> </td>
-            <td> <label for="s">S:</label> </td>
-            <td> <label for="l">L:</label> </td>
+            <td> <label for="h">Hue</label> </td>
+            <td> <label for="s">Saturation</label> </td>
+            <td> <label for="l">Lightness</label> </td>
          </tr>
 
          <tr id="hsl-input-row">
             <td> <input type="number" id="h" placeholder="Hue" min="0" max="359"> <sup>°</sup> </td>
             <td> <input type="number" id="s" placeholder="Saturation" min="0" max="100"> % </td>
             <td> <input type="number" id="l" placeholder="Lightness" min="0" max="100"> % </td>
+            <td><i class="fa-solid fa-copy copy" onclick="copyToClipboard('hsl')"></i></td>
          </tr>
       </table>
 
