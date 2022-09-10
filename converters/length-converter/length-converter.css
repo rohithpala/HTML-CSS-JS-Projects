@@ -25,7 +25,8 @@ body {
 }
 
 main h1 {
-  color: #efefef;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
 #table-container {
@@ -36,7 +37,7 @@ main h1 {
 
 .input {
   background-color: #fff;
-  min-width: 300px;
+  width: 300px;
   margin: 15px 5px;
   padding: 15px;
   border: none;
@@ -58,7 +59,7 @@ table {
   min-width: 70%;
   margin: 10px;
   table-layout: auto;
-  padding-left: 10px;
+  padding: 10px;
 }
 
 #written-by-container {
@@ -75,4 +76,21 @@ table {
 
 #written-by-container a {
   color: #fff;
+}
+
+@media (max-width: 500px) {
+  table {
+    margin: 0;
+    padding: 0;
+  }
+
+  .input {
+    width: 200px;
+    height: 10px;
+    margin-left: 10px;
+  }
+
+  #written-by-container {
+    font-size: 12px;
+  }
 }
