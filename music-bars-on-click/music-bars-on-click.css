@@ -8,12 +8,31 @@
 }
 
 body {
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: hidden;
+  user-select: none;
 }
 
-.music-bar {
-  position: fixed;
-  width: 10px;
-  background-color: #000;
-  transition: height 2s ease-in-out;
+#written-by-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+#written-by-container a {
+  color: #000;
+}
+
+@media (max-width: 440px) {
+  #written-by-container {
+    font-size: 12px;
+  }
 }
