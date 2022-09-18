@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <link rel="stylesheet" href="navbar.css">
+   <link rel="stylesheet" href="./stylesheets/main.css">
+
+   <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="nav">
+   <div class="small-navbar">
+      <ul>
+         <li class="list active">
+            <a href="#">
+               <span class="icon"><i class="fa-solid fa-house-chimney"></i></span>
+               <span class="text">Home</span>
+            </a>
+         </li>
+         <li class="list">
+            <a href="#">
+               <span class="icon"><i class="fa-solid fa-briefcase"></i></span>
+               <span class="text">My Works</span>
+            </a>
+         </li>
+         <li class="list">
+            <a href="#">
+               <span class="icon"><i class="fa-solid fa-file"></i></span>
+               <span class="text">Resume</span>
+            </a>
+         </li>
+
+         <div class="indicator"></div>
+      </ul>
+   </div>
+
+   <script>
+      const list = document.querySelectorAll(".list");
+      function activeLink() {
+         list.forEach(item => {
+            item.classList.remove("active");
+         });
+         this.classList.add("active");
+      }
+
+      list.forEach(item => {
+         item.addEventListener("click", activeLink);
+      });
+   </script>
+</body>
+
+</html>
