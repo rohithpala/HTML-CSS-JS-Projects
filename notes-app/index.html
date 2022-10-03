@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Notes App</title>
+
+   <link rel="stylesheet" href="notes-app.css">
+   <script src="notes-app.js" defer></script>
+
+   <script src="https://kit.fontawesome.com/23538a4f23.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <nav>
+      <a href="/" class="logo">Notey</a>
+      <button class="add-btn">Add a Note</button>
+   </nav>
+   <main>
+      <div class="notes"></div>
+
+      <div class="no-notes">No Notes to Show</div>
+
+      <div class="add-note-container">
+         <div class="add-note-header">
+            <h2 class="add-note-title">Add a Note</h2>
+            <button class="close-btn"><i class="fa-solid fa-times"></i></button>
+         </div>
+         <form class="add-note-form">
+            <input type="text" name="title" class="add-note-title-input" placeholder="Note Title">
+            <textarea name="body" cols="30" rows="10" class="add-note-body-input" placeholder="Note Body"></textarea>
+            <button class="add-note-btn">Add Note</button>  
+         </form>
+      </div>
+   </main>
+</body>
+
+</html>
