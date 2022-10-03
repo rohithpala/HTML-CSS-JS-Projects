@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 220px;
+  color: #000100;
+  background: url("./images/hcj.png") no-repeat left center;
+  border: 5px solid #000100;
+  padding: 20px 0;
+}
+
+.container a {
+  color: #273636;
+}
+
+@media (max-width: 1250px) {
+  .container {
+    background: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    font-size: x-small;
+  }
+}
+
+main.works-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.works {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.works-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.heading-section {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.codes-link {
+  position: absolute;
+  right: 20px;
+  color: #000;
+  background-color: #00ff9d;
+  text-decoration: none;
+  padding: 7px 15px;
+}
+
+.links-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.works a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #00ff9d;
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: 0.2s transform;
+}
+
+.work:hover {
+  transform: scale(1.02);
+}
+
+.project-image {
+  width: 350px;
+  height: 180px;
+}
+
+@media (max-width: 1170px) {
+  .links-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 780px) {
+  .heading-section {
+    flex-direction: column;
+  }
+
+  .links-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .codes-link {
+    position: unset;
+  }
+}
+
+@media (max-width: 430px) {
+  .project-image {
+    width: 300px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 400px) {
+  .work {
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 360px) {
+  .project-image {
+    width: 250px;
+    height: 120px;
+  }
+
+  .works a {
+    font-size: 0.8em;
+    letter-spacing: 0;
+  }
+}
