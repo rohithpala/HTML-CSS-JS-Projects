@@ -54,11 +54,12 @@ nav .code:hover {
 .note {
   color: #FFF;
   background-color: #6753FD;
-  height: 100%;
+  width: 436px;
   height: 390px;
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
+  overflow: auto;
 }
 
 .note .note-header {
@@ -69,6 +70,12 @@ nav .code:hover {
   margin-bottom: 15px;
   padding-bottom: 10px;
   border-bottom: 1px solid #AAA;
+}
+
+.note .note-header .note-title {
+  width: 320px;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .note .delete-btn {
@@ -94,6 +101,11 @@ nav .code:hover {
 .note .delete-btn>img {
   width: 20px;
   height: 20px;
+}
+
+.note .note-body {
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 /* No Notes */
