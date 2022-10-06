@@ -16,7 +16,7 @@
 <body>
    <nav>
       <a href="https://github.com/rohithpala/HTML-CSS-JS-Projects/tree/main/notes-app" class="code" target="_blank">Code for the App <i class="fa-solid fa-arrow-right"></i></a>
-      <button class="add-btn">Add a Note</button>
+      <button class="add-btn">Add a Note <pre style="display: inline;"> </pre><i class="fa-solid fa-plus"></i></button>
    </nav>
    <main>
       <div class="notes"></div>
@@ -30,7 +30,9 @@
          </div>
          <form class="add-note-form">
             <input type="text" name="title" class="add-note-title-input" placeholder="Note Title">
+            <span class="title-error">Enter a title for the note</span>
             <textarea name="body" cols="30" rows="10" class="add-note-body-input" placeholder="Note Body"></textarea>
+            <span class="body-error">Enter a body for the note</span>
             <button class="add-note-btn">Add Note</button>  
          </form>
       </div>

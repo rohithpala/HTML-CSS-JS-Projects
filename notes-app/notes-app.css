@@ -103,7 +103,7 @@ nav .code:hover {
   align-items: center;
 }
 
-/* Add Note Container */
+/* Add Note Form */
 .add-note-container>* {
   display: flex;
   justify-content: center;
@@ -133,7 +133,7 @@ nav .code:hover {
   flex-direction: column;
 }
 
-.add-note-form>* {
+.add-note-form>*:not(span) {
   width: 100%;
   margin: 10px 0;
   padding: 10px;
@@ -141,6 +141,15 @@ nav .code:hover {
   border-radius: 5px;
   outline: none;
   resize: none;
+}
+
+.title-error,
+.body-error {
+  display: none;
+  color: #F00;
+  font-size: 15px;
+  width: 100%;
+  text-align: left;
 }
 
 .add-note-btn {
