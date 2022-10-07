@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.nav {
+  background-color: #333;
+}
+
+.small-navbar {
+  position: relative;
+  width: 320px;
+  height: 70px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.small-navbar ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.small-navbar ul li {
+  position: relative;
+  list-style: none;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+}
+
+.small-navbar ul li a {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.small-navbar ul li a .icon {
+  position: relative;
+  display: block;
+  line-height: 100px;
+  font-size: 25px;
+  text-align: center;
+  transition: 0.5s;
+  color: #0051ff;
+}
+
+.small-navbar ul li.active a .icon {
+  translate: 0 -35px;
+}
+
+.small-navbar ul li a .text {
+  position: absolute;
+  color: #0051ff;
+  font-weight: 400;
+  transition: 0.5s;
+  translate: 0 30px;
+  opacity: 0;
+}
+
+.small-navbar ul li.active a .text {
+  opacity: 1;
+  translate: 0 10px;
+}
+
+.indicator {
+  position: absolute;
+  top: -23%;
+  left: 15px;
+  background-color: #29fd53;
+  width: 70px;
+  height: 70px;
+  border: 6px solid #333;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+.indicator::before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  left: -21px;
+  width: 20px;
+  height: 20px;
+  border-top-right-radius: 20px;
+  background-color: transparent;
+  box-shadow: 0 -10px 0 0 #333;
+}
+
+.indicator::after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  right: -22px;
+  width: 20px;
+  height: 20px;
+  border-top-left-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 -10px 0 0 #333;
+}
+
+.small-navbar ul li:nth-child(1).active ~ .indicator {
+  translate: calc(100px * 0);
+}
+
+.small-navbar ul li:nth-child(2).active ~ .indicator {
+  translate: calc(100px * 1);
+}
+
+.small-navbar ul li:nth-child(3).active ~ .indicator {
+  translate: calc(100px * 2);
+}
