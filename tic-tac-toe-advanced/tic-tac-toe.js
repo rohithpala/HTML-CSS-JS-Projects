@@ -1,5 +1,7 @@
 const boards = document.querySelectorAll(".board");
-const cells = document.querySelectorAll(".cell");
+const largeCells = document.querySelectorAll(".large-cell");
+const cellElements = document.getElementsByClassName("cell");
+
 const turnText = document.getElementsByClassName("turn")[0];
 const resultWindowModal = document.getElementsByClassName("result-window-modal")[0];
 const result = document.getElementsByClassName("result")[0];
@@ -28,16 +30,25 @@ function setup() {
    boards.forEach(board => {
       board.classList.remove("turn-x", "turn-o");
    });
-   // for (let i = 0 ; i < boards.length ; i++)
-   //    boards[i].classList.remove("turn-x", "turn-o");
    resultWindowModal.style.display = "none";
    restartContainer.style.display = "none";
-
-   for (let cell of cells) {
-      cell.style.pointerEvents = "all";
-      cell.classList.remove("x", "o");
-      cell.addEventListener("click", fillCell);
+   
+   cells = [];
+   for (let i = 0 ; i < 9 ; i++) {
+      cells.push([]);
+      for (let j = 0 ; j < 9 ; j++) {
+         console.log(cellElements.item(0));
+         cells[i].push(cellElements.item(i * 9 + j));
+      }
    }
+
+   console.log(cells[0]);
+
+   // for (let cell of cells) {
+   //    cell.style.pointerEvents = "all";
+   //    cell.classList.remove("x", "o");
+   //    cell.addEventListener("click", fillCell);
+   // }
 
    turn = Math.round(Math.random(0, 1)) == 1 ? "x" : "o";
    boards.forEach(board => {
@@ -47,6 +58,7 @@ function setup() {
 }
 
 function fillCell() {
+   console.log(this);
    this.classList.add(turn);
    this.style.pointerEvents = "none";
 

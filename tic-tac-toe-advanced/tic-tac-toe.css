@@ -42,7 +42,7 @@ body {
 .large-cell {
   display: grid;
   grid-template-columns: repeat(3, auto);
-  padding: 20px;
+  padding: 13px;
   border: 1px solid #000;
 }
 
