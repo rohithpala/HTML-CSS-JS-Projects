@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.title {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  background-color: #123456;
+  text-align: center;
+}
+
+.turn {
+  color: #fff;
+  background-color: #958e8e;
+  margin-bottom: 15px;
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
+}
+
+.board,
+.large-board {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+}
+
+.large-cell {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  padding: 20px;
+  border: 1px solid #000;
+}
+
+.cell {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.cell:nth-child(1),
+.large-cell:nth-child(1),
+.cell:nth-child(2),
+.large-cell:nth-child(2),
+.cell:nth-child(3),
+.large-cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(1),
+.large-cell:nth-child(1),
+.cell:nth-child(4),
+.large-cell:nth-child(4),
+.cell:nth-child(7),
+.large-cell:nth-child(7) {
+  border-left: none;
+}
+
+.cell:nth-child(7),
+.large-cell:nth-child(7),
+.cell:nth-child(8),
+.large-cell:nth-child(8),
+.cell:nth-child(9),
+.large-cell:nth-child(9) {
+  border-bottom: none;
+}
+
+.cell:nth-child(3),
+.large-cell:nth-child(3),
+.cell:nth-child(6),
+.large-cell:nth-child(6),
+.cell:nth-child(9),
+.large-cell:nth-child(9) {
+  border-right: none;
+}
+
+.cell.x::before,
+.cell.x::after,
+.board.turn-x .cell:not(.x):not(.o):hover::after,
+.board.turn-x .cell:not(.x):not(.o):hover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 2px;
+  height: 20px;
+  background-color: #000;
+}
+
+.cell.x::before,
+.board.turn-x .cell:not(.x):not(.o):hover::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cell.x::after,
+.board.turn-x .cell:not(.x):not(.o):hover::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.board.turn-x .cell:not(.x):not(.o):hover::after,
+.board.turn-x .cell:not(.x):not(.o):hover::before {
+  background-color: #958e8e;
+}
+
+.cell.o::before,
+.board.turn-o .cell:not(.x):not(.o):hover::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #000;
+  border-radius: 50%;
+}
+
+.cell.o::before,
+.board.turn-o .cell:not(.x):not(.o):hover::before {
+  transform: translate(-50%, -50%);
+}
+
+.board.turn-o .cell:not(.x):not(.o):hover::before {
+  border-color: #958e8e;
+}
+
+.cell.x,
+.cell.o {
+  pointer-events: none;
+}
+
+.result-window-modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-window {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eee;
+  padding: 50px;
+  border-radius: 15px;
+}
+
+.result-window .buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.result-window button {
+  width: 100px;
+  padding: 7px 0;
+}
+
+.result-window .view {
+  color: #fff;
+  background-color: #123456;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.result-window .restart,
+.restart-button {
+  color: #fcc;
+  background-color: #900;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.restart-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.restart-button {
+  margin: 0;
+  padding: 10px 40px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 18px;
+}
