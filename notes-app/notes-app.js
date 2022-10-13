@@ -75,12 +75,14 @@ function addToDOM(note) {
    notesConatiner.innerHTML += `
       <div class="note" id="note${note.id}">
          <div class="note-header">
-            <h2 class="note-title">${note.title}</h2>
-            <button class="delete-btn" onclick="deleteNote(${note.id})"><img src="delete.svg" /></button>
+            <h2 class="note-title"></h2>
+            <button class="delete-btn" onclick="deleteNote(${note.id})"><i class="fa-solid fa-trash"></i></button>
          </div>
          <p class="note-body">${note.body}</p>
       </div>
    `;
+   
+   setTimeout(document.querySelector("#note" + note.id + " .note-title").textContent = note.title, 100);
 };
 
 // Closing the Add note form

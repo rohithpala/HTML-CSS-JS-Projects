@@ -54,8 +54,8 @@ nav .code:hover {
 .note {
   color: #FFF;
   background-color: #6753FD;
-  width: 436px;
-  height: 390px;
+  width: 350px;
+  height: 350px;
   padding: 20px;
   border-radius: 10px;
   cursor: pointer;
@@ -73,20 +73,19 @@ nav .code:hover {
 }
 
 .note .note-header .note-title {
-  width: 320px;
+  max-width: 250px;
   word-wrap: break-word;
   word-break: break-all;
 }
 
 .note .delete-btn {
-  width: 40px;
+  width: 43px;
   height: 40px;
   color: #FFF;
   background-color: #F00;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: 25px;
   border: none;
   border-radius: 50%;
   font-size: 20px;
@@ -98,17 +97,12 @@ nav .code:hover {
   scale: 0.95;
 }
 
-.note .delete-btn>img {
-  width: 20px;
-  height: 20px;
-}
-
 .note .note-body {
   word-wrap: break-word;
   word-break: break-all;
 }
 
-/* No Notes */
+/* No Notes text */
 .no-notes {
   display: none;
   justify-content: center;
