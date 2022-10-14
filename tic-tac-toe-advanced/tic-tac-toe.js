@@ -1,6 +1,7 @@
 const boards = document.querySelectorAll(".board");
 const largeCells = document.querySelectorAll(".large-cell");
 const cellElements = document.getElementsByClassName("cell");
+let cells; // this is a 2d array that contains cells of each largeCell in an array
 
 const turnText = document.getElementsByClassName("turn")[0];
 const resultWindowModal = document.getElementsByClassName("result-window-modal")[0];
@@ -32,23 +33,20 @@ function setup() {
    });
    resultWindowModal.style.display = "none";
    restartContainer.style.display = "none";
-   
-   cells = [];
-   for (let i = 0 ; i < 9 ; i++) {
+
+   cells = [[]];
+   for (let i = 1; i <= 9; i++) {
       cells.push([]);
-      for (let j = 0 ; j < 9 ; j++) {
-         console.log(cellElements.item(0));
-         cells[i].push(cellElements.item(i * 9 + j));
+      for (let j = 0; j < 9; j++) {
+         cells[i].push(cellElements.item((i - 1) * 9 + j));
       }
    }
 
-   console.log(cells[0]);
-
-   // for (let cell of cells) {
-   //    cell.style.pointerEvents = "all";
-   //    cell.classList.remove("x", "o");
-   //    cell.addEventListener("click", fillCell);
-   // }
+   for (let cell of cellElements) {
+      cell.style.pointerEvents = "all";
+      cell.classList.remove("x", "o");
+      cell.addEventListener("click", fillCell);
+   }
 
    turn = Math.round(Math.random(0, 1)) == 1 ? "x" : "o";
    boards.forEach(board => {
@@ -58,61 +56,60 @@ function setup() {
 }
 
 function fillCell() {
-   console.log(this);
    this.classList.add(turn);
    this.style.pointerEvents = "none";
 
-   if (didPlayerWin()) {
-      for (let cell of cells) {
-         cell.style.pointerEvents = "none";
-      }
-      resultWindowModal.style.display = "flex";
-      result.textContent = `"` + turn.toUpperCase() + `"` + " is the Winner";
-   } else if (isItDraw()) {
-      resultWindowModal.style.display = "flex";
-      result.textContent = "It is a Draw";
-   }
+   // if (didPlayerWin()) {
+   //    for (let cell of cells) {
+   //       cell.style.pointerEvents = "none";
+   //    }
+   //    resultWindowModal.style.display = "flex";
+   //    result.textContent = `"` + turn.toUpperCase() + `"` + " is the Winner";
+   // } else if (isItDraw()) {
+   //    resultWindowModal.style.display = "flex";
+   //    result.textContent = "It is a Draw";
+   // }
 
    boards.forEach(board => {
       board.classList.remove("turn-" + turn);
    });
-   turn = turn == "x" ? "o" : "x";
+   turn = turn === "x" ? "o" : "x";
    boards.forEach(board => {
       board.classList.add("turn-" + turn);
    });
    turnText.textContent = turn.toUpperCase() + "'s Turn";
 }
 
-function didPlayerWin() {
-   // we loop through every combination and
-   // then we loop through every index in each combination
-   // and check if the cell with that index has the
-   // turn class in it. If it has, then the current player is winner,
-   // so return true
-   // else, we return false;
-   return winningCombinations.some(combination => {
-      return combination.every(c => {
-         if (cells[c].classList.contains(turn)) {
-            return true;
-         }
+// function didPlayerWin() {
+//    // we loop through every combination and
+//    // then we loop through every index in each combination
+//    // and check if the cell with that index has the
+//    // turn class in it. If it has, then the current player is winner,
+//    // so return true
+//    // else, we return false;
+//    return winningCombinations.some(combination => {
+//       return combination.every(c => {
+//          if (cells[c].classList.contains(turn)) {
+//             return true;
+//          }
 
-         return false;
-      });
-   });
-}
+//          return false;
+//       });
+//    });
+// }
 
-function isItDraw() {
-   // looping through every cell and checking if every cell
-   // has an "x" or an "o". If it has, then it is a draw, so return true
-   // else it is not, so we return false
-   return [...cells].every(c => {
-      if (c.classList.contains("x") || c.classList.contains("o")) {
-         return true;
-      }
+// function isItDraw() {
+//    // looping through every cell and checking if every cell
+//    // has an "x" or an "o". If it has, then it is a draw, so return true
+//    // else it is not, so we return false
+//    return [...cells].every(c => {
+//       if (c.classList.contains("x") || c.classList.contains("o")) {
+//          return true;
+//       }
 
-      return false;
-   });
-}
+//       return false;
+//    });
+// }
 
 view.addEventListener("click", function () {
    resultWindowModal.style.display = "none";
