@@ -56,6 +56,10 @@ function setup() {
 }
 
 function fillCell() {
+   const parent = this.parentNode;
+   if (parent.classList.contains("turn-no")) {
+      return;
+   }
    this.classList.add(turn);
    this.style.pointerEvents = "none";
 
@@ -78,6 +82,32 @@ function fillCell() {
       board.classList.add("turn-" + turn);
    });
    turnText.textContent = turn.toUpperCase() + "'s Turn";
+
+   goToNextCell(this);
+}
+
+function goToNextCell(clickedCell) {
+   nextCell = -1;
+   for (let i = 1; i <= 9; i++) {
+      // i is the index of largeCell
+      if (cells[i].includes(clickedCell)) {
+         nextCell = cells[i].indexOf(clickedCell) + 1;
+         break;
+      }
+   }
+   
+   for (let i = 0 ; i < 9 ; i++) {
+      if (largeCells[i].id === "largeCell" + nextCell) {
+         boards[i].classList.add("turn-" + turn);
+         boards[i].classList.remove("turn-no");
+         largeCells[i].style.backgroundColor = "#ddd";
+      } else {
+         boards[i].classList.add("turn-no");
+         boards[i].classList.remove("turn-x");
+         boards[i].classList.remove("turn-o");
+         largeCells[i].style.backgroundColor = "#aaa";
+      }
+   }
 }
 
 // function didPlayerWin() {
