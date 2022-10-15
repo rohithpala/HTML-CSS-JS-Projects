@@ -11,6 +11,7 @@ const restart = document.getElementsByClassName("restart")[0];
 const restartContainer = document.getElementsByClassName("restart-container")[0];
 const restartInRestartContainer = document.getElementsByClassName("restart-button")[0];
 let turn;
+let x = [], o = [];
 
 // all possible winning combinations
 const winningCombinations = [
@@ -34,11 +35,12 @@ function setup() {
    resultWindowModal.style.display = "none";
    restartContainer.style.display = "none";
 
-   cells = [[]];
-   for (let i = 1; i <= 9; i++) {
+   // storing references of all cells in "cells"
+   cells = [];
+   for (let i = 0; i < 9; i++) {
       cells.push([]);
       for (let j = 0; j < 9; j++) {
-         cells[i].push(cellElements.item((i - 1) * 9 + j));
+         cells[i].push(cellElements.item(i * 9 + j));
       }
    }
 
@@ -57,13 +59,16 @@ function setup() {
 
 function fillCell() {
    const parent = this.parentNode;
-   if (parent.classList.contains("turn-no")) {
+   if (parent.classList.contains("turn-no"))
       return;
-   }
+
    this.classList.add(turn);
    this.style.pointerEvents = "none";
 
-   // if (didPlayerWin()) {
+   let res;
+   if (res = didPlayerWinACell()) {
+         console.log(res);
+   }
    //    for (let cell of cells) {
    //       cell.style.pointerEvents = "none";
    //    }
@@ -88,45 +93,44 @@ function fillCell() {
 
 function goToNextCell(clickedCell) {
    nextCell = -1;
-   for (let i = 1; i <= 9; i++) {
+   for (let i = 0; i < 9; i++) {
       // i is the index of largeCell
       if (cells[i].includes(clickedCell)) {
-         nextCell = cells[i].indexOf(clickedCell) + 1;
+         nextCell = cells[i].indexOf(clickedCell);
          break;
       }
    }
-   
-   for (let i = 0 ; i < 9 ; i++) {
+
+   for (let i = 0; i < 9; i++) {
       if (largeCells[i].id === "largeCell" + nextCell) {
          boards[i].classList.add("turn-" + turn);
          boards[i].classList.remove("turn-no");
          largeCells[i].style.backgroundColor = "#ddd";
       } else {
          boards[i].classList.add("turn-no");
-         boards[i].classList.remove("turn-x");
-         boards[i].classList.remove("turn-o");
+         boards[i].classList.remove("turn-x", "turn-o");
          largeCells[i].style.backgroundColor = "#aaa";
       }
    }
 }
 
-// function didPlayerWin() {
-//    // we loop through every combination and
-//    // then we loop through every index in each combination
-//    // and check if the cell with that index has the
-//    // turn class in it. If it has, then the current player is winner,
-//    // so return true
-//    // else, we return false;
-//    return winningCombinations.some(combination => {
-//       return combination.every(c => {
-//          if (cells[c].classList.contains(turn)) {
-//             return true;
-//          }
-
-//          return false;
-//       });
-//    });
-// }
+function didPlayerWinACell() {
+   // we loop through every combination and
+   // then we loop through every index in each combination
+   // and check if the cell with that index has the
+   // turn class in it. If it has, then the current player is winner,
+   // so return true
+   // else, we return false;
+   for (let i = 0; i < 9; i++) {
+      winningCombinations.some(combination => {
+         combination.every(c => {
+            if (cells[i][c].classList.contains(turn)) {
+               console.log(i, c);
+            }
+         });
+      });
+   }
+}
 
 // function isItDraw() {
 //    // looping through every cell and checking if every cell

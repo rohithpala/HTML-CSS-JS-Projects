@@ -33,6 +33,20 @@ body {
   text-align: center;
 }
 
+.colors, .colors * {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+}
+
+.color {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
 .board,
 .large-board {
   display: grid;
@@ -144,6 +158,10 @@ body {
 .cell.x,
 .cell.o {
   pointer-events: none;
+}
+
+.board.turn-no>* {
+  cursor: default;
 }
 
 .result-window-modal {
