@@ -1,26 +1,55 @@
-const imageField = document.getElementById("image-field");
-let image, reader, file;
+const dragArea = document.querySelector(".drag-area");
+const dragAndDrop = document.querySelector(".dd-span");
+const imageContainer = document.querySelector(".image-container");
 
-imageField.addEventListener("input", function () {
-   file = imageField.files[0];
+const fileInput = document.querySelector("#file-input");
 
-   image = document.createElement("img");
-   image.id = "image";
-   reader = new FileReader();
-   reader.onloadend = function () {
-      image.src = reader.result;
-   }
-   reader.readAsDataURL(file);
+const image = document.querySelector(".image");
 
-   imageField.after(image);
+let file;
 
-   createBackground();
+dragArea.addEventListener("dragover", (e) => {
+   e.preventDefault();
+   dragAndDrop.textContent = "Release to Upload";
+   dragArea.classList.add("active");
 });
 
-function createBackground() {
-   const screenWidth = window.screen.width;
-   const screenHeight = window.screen.height;
-   const imageElement = document.getElementById("image");
-   console.log(imageElement.clientWidth, imageElement.clientHeight);
-   // console.log(image);
+dragArea.addEventListener("dragleave", (e) => {
+   e.preventDefault();
+   dragAndDrop.textContent = "Drag and Drop";
+   dragArea.classList.remove("active");
+});
+
+dragArea.addEventListener("drop", (e) => {
+   e.preventDefault();
+
+   file = e.dataTransfer.files[0]; // remove index to accept multiple files
+   displayFile(file);
+
+   dragAndDrop.textContent = "Drag and Drop";
+   dragArea.classList.remove("active");
+});
+
+fileInput.addEventListener("input", function() {
+   displayFile(this.files[0]);
+});
+
+function displayFile(file) {
+   const fileType = file.type;
+   const validExtensions = ["image/jpeg", "image/jpg", "image/png"];
+   if (validExtensions.includes(fileType)) {
+      let fileReader = new FileReader();
+      fileReader.onload = () => {
+         imageContainer.style.display = "flex";
+         image.src = fileReader.result;
+      };
+      fileReader.readAsDataURL(file);
+   } else {
+      alert("File not supported");
+   }
 }
+
+const createBackground = document.querySelector(".create-background");
+createBackground.addEventListener("click", () => {
+   console.log("create background");
+});
