@@ -1,6 +1,6 @@
 <html>
 This repository contains HTML, CSS & JavaScript Projects for any web dev lover out there.<br>
-Preview all the pages here: <a href="https://all-websites-by-rohith.netlify.app/">https://all-websites-by-rohith.netlify.app/</a>
+Preview all the pages here: https://all-websites-by-rohith.netlify.app/
 <br><br>
 
 # List of Websites:
