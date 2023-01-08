@@ -5,7 +5,10 @@ Preview all the pages here: <a href="https://all-websites-by-rohith.netlify.app/
 
 # List of Websites:
 <ol>
-  <li><a href="#">Accordion</a></li>
+  <li>
+    <a href="#">Accordion</a><br>
+    <!--<img src="./0_all-my-works/images/accordion.png?raw=true" />-->
+   </li>
   <li><a href="#">Age Calculator</a></li>
   <li><a href="#">Analog Calculator</a></li>
   <li><a href="#">Animating Card and Image</a></li>
