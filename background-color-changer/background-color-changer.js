@@ -38,6 +38,7 @@ function setBackgroundColor() {
 // function that changes colors of text based on brightness of background color to improve readability
 function changeColors(isBGDark, calledBy) {
    // referencing all the text parts to change their color based on background brightness
+   const info = document.getElementById("info").style;
    const h1 = document.getElementById("background-color-h1").style;
    const copy = document.getElementById("copy").style;
    const reset = document.getElementById("reset").style;
@@ -49,7 +50,7 @@ function changeColors(isBGDark, calledBy) {
    const a1 = writtenByContainerA[0], a2 = writtenByContainerA[1];
 
    if (isBGDark) { // changing color to white if background color is dark
-      h1.color = copy.color = rgbLabel.color = hexLabel.color = writtenByContainer.color
+      info.color = h1.color = copy.color = rgbLabel.color = hexLabel.color = writtenByContainer.color
          = a1.style.color = a2.style.color = "#fff";
 
       change.color = "#000";
@@ -60,7 +61,7 @@ function changeColors(isBGDark, calledBy) {
 
       h1.border = reset.border = change.border = writtenByContainer.border = "2px solid #fff";
    } else { // changing color to black if background color is not dark
-      h1.color = copy.color = rgbLabel.color = hexLabel.color = writtenByContainer.color
+      info.color = h1.color = copy.color = rgbLabel.color = hexLabel.color = writtenByContainer.color
          = a1.style.color = a2.style.color = "#000";
 
       change.color = "#fff";
@@ -96,3 +97,11 @@ function copyToClipboard() {
       else alert("Copied the RGB Color Code to Clipboard");
    });
 }
+
+// color should also change when spacebar is pressed
+document.addEventListener("keydown", (e) => {
+   if (e.code === "Space") {
+      document.activeElement.blur(); // removing focus on the button
+      setBackgroundColor();
+   }
+});
