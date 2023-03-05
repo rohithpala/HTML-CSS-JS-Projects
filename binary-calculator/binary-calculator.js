@@ -33,22 +33,25 @@ class Calculator {
 
    compute() {
       let result;
-      const previous = parseFloat(this.previousOperand);
-      const current = parseFloat(this.currentOperand);
+      const previous = parseInt(this.previousOperand, 2);
+      const current = parseInt(this.currentOperand, 2);
       if (isNaN(previous) || isNaN(current))
          return;
       switch (this.operation) {
          case "+":
-            result = previous + current;
+            result = Number(previous + current).toString(2);
             break;
          case "-":
-            result = previous - current;
+            result = Number(previous - current).toString(2);
             break;
          case "*":
-            result = previous * current;
+            result = Number(previous * current).toString(2);
             break;
          case "÷":
-            result = previous / current;
+            result = Number(previous / current).toString(2);
+            if (isNaN(result) || result === "Infinity") {
+               result = "";
+            }
             break;
          default:
             return;
@@ -60,16 +63,18 @@ class Calculator {
 
    getDisplayNumber(number) {
       const stringNumber = number.toString();
-      const integerPart = parseFloat(stringNumber.split(".")[0]);
+      const integerPart = stringNumber.split(".")[0];
       const decimalPart = stringNumber.split(".")[1];
+
+      // if (decimalPart != null) {
+      //    return parseInt(stringNumber, 2) + parseFloat(stringNumber.substring(stringNumber.indexOf('.')), 2);
+      // }
 
       let integerDisplay;
       if (isNaN(integerPart)) {
          integerDisplay = "";
       } else {
-         integerDisplay = integerPart.toLocaleString("en", {
-            maximumFractionDigits: 0
-         });
+         integerDisplay = integerPart;
       }
 
       if (decimalPart != null) {
