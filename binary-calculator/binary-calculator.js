@@ -66,9 +66,10 @@ class Calculator {
       const integerPart = stringNumber.split(".")[0];
       const decimalPart = stringNumber.split(".")[1];
 
-      // if (decimalPart != null) {
-      //    return parseInt(stringNumber, 2) + parseFloat(stringNumber.substring(stringNumber.indexOf('.')), 2);
-      // }
+      if (decimalPart != null) {
+         console.log(parseInt(stringNumber, 2) + parseFloat(stringNumber.substring(stringNumber.indexOf('.')), 2));
+         return parseInt(stringNumber, 2) + parseFloat(stringNumber.substring(stringNumber.indexOf('.')), 2);
+      }
 
       let integerDisplay;
       if (isNaN(integerPart)) {
@@ -97,6 +98,7 @@ class Calculator {
 }
 
 const numberButtons = document.querySelectorAll('[data-number]');
+// const dotButton = document.querySelectorAll('[data-dot]')[0];
 const operationButtons = document.querySelectorAll('[data-operation]');
 const equalsButton = document.querySelector('[data-equals]');
 const deleteButton = document.querySelector('[data-delete]');
