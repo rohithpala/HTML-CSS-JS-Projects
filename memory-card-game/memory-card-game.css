@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cols: 4;
+}
+
+/* N Cards Container */
+.n-cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.n-cards-container span {
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.n-cards {
+  position: relative;
+  width: 350px;
+  margin: 10px 0;
+  padding: 20px 0 20px 20px;
+  border: 2px solid #000;
+  font-size: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.n-cards::after {
+  position: absolute;
+  right: 0;
+  opacity: 0;
+  content: ">";
+  font-weight: 600;
+  transition: right 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.n-cards:hover::after {
+  right: 10px;
+  opacity: 1;
+}
+
+.n-cards:nth-child(4n):hover {
+  color: #FFF;
+  background-color: #6753FD;
+}
+
+.n-cards:nth-child(4n+1):hover {
+  color: #FFF;
+  background-color: #efc92f;
+}
+
+.n-cards:nth-child(4n+2):hover {
+  color: #FFF;
+  background-color: #fd9753;
+}
+
+.n-cards:nth-child(4n+3):hover {
+  color: #FFF;
+  background-color: #fd53cd;
+}
+
+/* Game Container */
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+}
+
+nav>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moves-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span.moves {
+  font-weight: 600;
+  margin-left: 5px;
+}
+
+.nav-home-btn,
+.nav-restart-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #ff4848;
+  margin-left: 10px;
+  padding: 5px 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.nav-home-btn {
+  background-color: #009700;
+}
+
+.game-container {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.game-grid {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-gap: 10px;
+}
+
+.game-grid>div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 110px;
+  height: 110px;
+  border: 4px solid #000;
+  cursor: pointer;
+}
+
+.game-grid>div img {
+  width: 100px;
+  height: 100px;
+}
+
+.game-grid>div>.open {
+  display: none;
+}
+
+/* Modal */
+.final-moves,
+.time-taken {
+  font-weight: 600;
+}
+
+.button {
+  background-color: transparent;
+  margin: 20px 10px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.game-completed-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.modal {
+  position: relative;
+  background-color: #fff;
+  width: 500px;
+  max-width: 100%;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.modal>span {
+  display: block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #f00;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Written by ... */
+#written-by-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 30px;
+}
+
+#written-by-container a {
+  color: #000;
+}
