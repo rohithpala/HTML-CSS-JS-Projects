@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Memory Game | Card Game</title>
+
+   <link rel="stylesheet" href="memory-card-game.css">
+   <script src="memory-card-game.js" defer></script>
+</head>
+
+<body>
+   <div class="n-cards-container">
+      <span>Choose the No. of Cards to play</span>
+      <div class="n-cards" data-n="12">12</div>
+      <div class="n-cards" data-n="16">16</div>
+      <div class="n-cards" data-n="20">20</div>
+      <div class="n-cards" data-n="24">24</div>
+
+      <div id="written-by-container">
+         <h3>Written by <a href="https://github.com/rohithpala" target="_blank">Rohith Pala</a> with &hearts;.</h3>
+         <h3>You can find the code of this project
+            <a href="https://github.com/rohithpala/HTML-CSS-JS-Projects/tree/main/memory-card-game"
+               target="_blank">here</a>
+         </h3>
+      </div>
+   </div>
+   <div class="game-container">
+      <nav>
+         <div>
+            <button class="nav-home-btn">Home</button>
+            <button class="nav-restart-btn">Restart</button>
+         </div>
+         <div class="timer">
+            <span class="minutes">00</span> :
+            <span class="seconds">00</span>
+         </div>
+         <div class="moves-container">Moves : <span class="moves">0</span></div>
+      </nav>
+
+      <div class="game-grid"></div>
+   </div>
+
+</body>
+<div class="game-completed-modal">
+   <div class="modal">
+      <span>
+         You've Succesfully Completed the Game in <span class="final-moves"></span> moves
+         <span>Time Taken : <span class="time-taken">00:00</span></span>
+      </span>
+      <button class="button home-btn">Go back to Home</button>
+      <button class="button restart-btn">Restart this game</button>
+      <button class="close-btn">x</button>
+   </div>
+</div>
+
+</html>
