@@ -40,7 +40,7 @@ Preview all the pages here: https://all-websites-by-rohith.netlify.app/
   <li><a href="#">Header Footer Templates</a></li>
   <li><a href="#">Input Placeholder Transition</a></li>
   <li><a href="#">Login Signup Pages</a></li>
-  <li><a href="#">Memory Card Game</a></li>
+  <li><a href="https://memory-game-by-rohith.netlify.app/">Memory Card Game</a></li>
   <li><a href="https://modal-by-rohith.netlify.app/">Modal / Popup</a></li>
   <li><a href="#">Mouse Coordinates</a></li>
   <li><a href="https://music-bars-by-rohith.netlify.app/">Music Bars on Click</a></li>
