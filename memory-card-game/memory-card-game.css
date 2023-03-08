@@ -144,8 +144,8 @@ span.moves {
 }
 
 .game-grid>div img {
-  width:75px;
-  height:75px;
+  width: 75px;
+  height: 75px;
 }
 
 .game-grid>div>.open {
