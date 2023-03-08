@@ -110,9 +110,9 @@ const calculator = new Calculator(previousOperandTextElement, currentOperandText
 
 numberButtons.forEach(button => {
    button.addEventListener("click", () => {
-      calculator.appendNumber(button.innerText)
+      calculator.appendNumber(button.textContent)
       calculator.updateDisplay();
-   });
+   })
 });
 
 operationButtons.forEach(button => {
@@ -135,4 +135,20 @@ deleteButton.addEventListener("click", () => {
 allClearButton.addEventListener("click", () => {
    calculator.clear();
    calculator.updateDisplay();
+});
+
+document.addEventListener("keydown", (event) => {
+   if (event.key === "0" || event.key === "1") {
+      calculator.appendNumber(event.key);
+      calculator.updateDisplay();
+   } else if (event.key === "+" || event.key === "-" || event.key === "*" || event.key === "/") {
+      calculator.chooseOperation(event.key);
+      calculator.updateDisplay();
+   } else if (event.key === "Backspace") {
+      calculator.delete();
+      calculator.updateDisplay();
+   } else if (event.key === "Enter") {
+      calculator.compute();
+      calculator.updateDisplay();
+   }
 });
