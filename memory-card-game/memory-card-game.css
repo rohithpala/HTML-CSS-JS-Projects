@@ -7,10 +7,6 @@
   box-sizing: border-box;
 }
 
-:root {
-  --cols: 4;
-}
-
 /* N Cards Container */
 .n-cards-container {
   display: flex;
@@ -133,7 +129,7 @@ span.moves {
 .game-grid {
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(var(--cols), 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
 }
 
@@ -141,25 +137,15 @@ span.moves {
   display: flex;
   justify-content: center;
   align-items: center;
-<<<<<<< HEAD
   width: 80px;
   height: 80px;
-=======
-  width: 110px;
-  height: 110px;
->>>>>>> b7ef98022cf88c2d0b36d88fb32259699d6076aa
   border: 4px solid #000;
   cursor: pointer;
 }
 
 .game-grid>div img {
-<<<<<<< HEAD
   width:75px;
   height:75px;
-=======
-  width: 100px;
-  height: 100px;
->>>>>>> b7ef98022cf88c2d0b36d88fb32259699d6076aa
 }
 
 .game-grid>div>.open {
