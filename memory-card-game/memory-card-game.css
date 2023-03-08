@@ -141,15 +141,15 @@ span.moves {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 110px;
-  height: 110px;
+  width: 80px;
+  height: 80px;
   border: 4px solid #000;
   cursor: pointer;
 }
 
 .game-grid>div img {
-  width: 100px;
-  height: 100px;
+  width:75px;
+  height:75px;
 }
 
 .game-grid>div>.open {
@@ -225,4 +225,10 @@ span.moves {
 
 #written-by-container a {
   color: #000;
+}
+
+@media(max-width: 400px) {
+  nav {
+    padding: 15px;
+  }
 }

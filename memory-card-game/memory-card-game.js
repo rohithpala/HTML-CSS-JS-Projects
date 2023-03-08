@@ -116,6 +116,7 @@ function startGame() {
 
 const closeBtn = document.querySelector(".close-btn");
 function home() {
+   gameGrid.innerHTML = "";
    gameContainer.style.display = "none";
    nCardsContainer.style.display = "flex";
 
