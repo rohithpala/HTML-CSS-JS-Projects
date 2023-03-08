@@ -101,17 +101,18 @@ nCards.forEach((nCard) => {
    });
 });
 
-let timerInterval, minutes, seconds;
+let timerInterval, minutes = 0, seconds = 0;
 function startTimer() {
    timerInterval = setInterval(() => {
       seconds = parseInt(secondsElement.textContent);
-      minutes = parseInt(minutesElement.textContent);
 
       if (seconds === 59) {
          secondsElement.textContent = "00";
          minutesElement.textContent = (minutes + 1).toString().padStart(2, "0");
+         minutes = parseInt(minutesElement.textContent);
+      } else {
+         secondsElement.textContent = (seconds + 1).toString().padStart(2, "0");
       }
-      secondsElement.textContent = (seconds + 1).toString().padStart(2, "0");
    }, 1000);
 }
 
